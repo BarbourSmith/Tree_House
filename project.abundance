@@ -206,8 +206,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.6481481481481481,
-      "y": 0.7158774373259054,
+      "x": 0.6501322751322751,
+      "y": 0.7047353760445683,
       "uniqueID": "id-1214",
       "name": "Person-For-Scale",
       "topLevel": false,
@@ -750,8 +750,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.30092592592592593,
-      "y": 0.2785515320334262,
+      "x": 0.2996031746031746,
+      "y": 0.28690807799442897,
       "uniqueID": "id-27",
       "name": "Base",
       "topLevel": false,
@@ -1907,8 +1907,8 @@
             },
             {
               "atomType": "Circle",
-              "x": 0.1097883597883598,
-              "y": 0.18384401114206128,
+              "x": 0.10648148148148147,
+              "y": 0.1977715877437326,
               "uniqueID": "id-647",
               "ioValues": [
                 {
@@ -2937,11 +2937,12 @@
               "ioValues": [
                 {
                   "name": "OD",
-                  "ioValue": 1016
+                  "ioValue": 1219.1999999999998,
+                  "currentEquation": "1219.1999999999998"
                 },
                 {
                   "name": "ID",
-                  "ioValue": 1000
+                  "ioValue": 1143
                 }
               ],
               "topLevel": false,
@@ -2982,7 +2983,7 @@
                   "ioValues": [
                     {
                       "name": "diameter",
-                      "ioValue": 1016
+                      "ioValue": 1219.1999999999998
                     }
                   ]
                 },
@@ -2994,7 +2995,7 @@
                   "ioValues": [
                     {
                       "name": "diameter",
-                      "ioValue": 1000
+                      "ioValue": 1143
                     }
                   ]
                 },
@@ -3068,6 +3069,19 @@
               "unitsKey": "Unitless",
               "fileTypeVersion": 1,
               "lastReloadedFromGithubAt": 1784432436200
+            },
+            {
+              "atomType": "Circle",
+              "x": 0.10119047619047619,
+              "y": 0.4317548746518106,
+              "uniqueID": "id-5205",
+              "ioValues": [
+                {
+                  "name": "diameter",
+                  "ioValue": 1143,
+                  "currentEquation": "45*25.4"
+                }
+              ]
             }
           ],
           "allConnectors": [
