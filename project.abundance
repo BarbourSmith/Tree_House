@@ -3139,24 +3139,6 @@
               ]
             },
             {
-              "atomType": "Rectangle",
-              "x": 0.08994708994708996,
-              "y": 0.5598885793871866,
-              "uniqueID": "id-493",
-              "ioValues": [
-                {
-                  "name": "x length",
-                  "ioValue": 2438.3999999999996,
-                  "currentEquation": "96*25.4"
-                },
-                {
-                  "name": "y length",
-                  "ioValue": 1524,
-                  "currentEquation": "5*12*25.4"
-                }
-              ]
-            },
-            {
               "atomType": "Circle",
               "x": 0.08002645502645503,
               "y": 0.22841225626740946,
@@ -3171,8 +3153,8 @@
             },
             {
               "atomType": "Move",
-              "x": 0.20634920634920637,
-              "y": 0.23119777158774377,
+              "x": 0.20701058201058203,
+              "y": 0.21448467966573817,
               "uniqueID": "id-495",
               "ioValues": [
                 {
@@ -3194,88 +3176,9 @@
               ]
             },
             {
-              "atomType": "ShrinkWrap",
-              "x": 0.33002645502645506,
-              "y": 0.40111420612813375,
-              "uniqueID": "id-496",
-              "name": "Shrink Wrap",
-              "ioValues": [
-                {
-                  "name": "Shape 1",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Shape 2",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Shape 3",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Shape 1",
-                  "ioValue": {
-                    "geometry": "move-circle-750-0-1000-0",
-                    "dimension": "2D",
-                    "tags": [],
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "bom": []
-                  }
-                },
-                {
-                  "name": "Shape 2",
-                  "ioValue": {
-                    "geometry": "move-rectangle-2438.3999999999996-1524-0--100-0",
-                    "dimension": "2D",
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "tags": [],
-                    "bom": []
-                  }
-                },
-                {
-                  "name": "Shape 3",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                }
-              ]
-            },
-            {
               "atomType": "Extrude",
-              "x": 0.6130952380952381,
-              "y": 0.3231197771587744,
+              "x": 0.6084656084656085,
+              "y": 0.30362116991643456,
               "uniqueID": "id-497",
               "ioValues": [
                 {
@@ -3290,8 +3193,8 @@
             },
             {
               "atomType": "Rectangle",
-              "x": 0.30753968253968256,
-              "y": 0.8245125348189415,
+              "x": 0.5105820105820106,
+              "y": 0.9387186629526462,
               "uniqueID": "id-510",
               "ioValues": [
                 {
@@ -3306,8 +3209,8 @@
             },
             {
               "atomType": "Extrude",
-              "x": 0.4411375661375661,
-              "y": 0.8607242339832869,
+              "x": 0.578042328042328,
+              "y": 0.8690807799442898,
               "uniqueID": "id-511",
               "ioValues": [
                 {
@@ -3322,8 +3225,8 @@
             },
             {
               "atomType": "Move",
-              "x": 0.5542328042328043,
-              "y": 0.7799442896935932,
+              "x": 0.6633597883597884,
+              "y": 0.796657381615599,
               "uniqueID": "id-512",
               "ioValues": [
                 {
@@ -3370,30 +3273,6 @@
                 {
                   "name": "height",
                   "ioValue": 18
-                }
-              ]
-            },
-            {
-              "atomType": "Move",
-              "x": 0.20701058201058203,
-              "y": 0.5348189415041783,
-              "uniqueID": "id-3262",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "xDist",
-                  "ioValue": 0
-                },
-                {
-                  "name": "yDist",
-                  "ioValue": -100
-                },
-                {
-                  "name": "zDist",
-                  "ioValue": 0
                 }
               ]
             },
@@ -3452,176 +3331,6 @@
                   "ioValue": "__GEOMETRY_INPUT__"
                 }
               ]
-            },
-            {
-              "atomType": "Move",
-              "x": 0.33465608465608465,
-              "y": 0.1532033426183844,
-              "uniqueID": "id-3282",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "xDist",
-                  "ioValue": 0
-                },
-                {
-                  "name": "yDist",
-                  "ioValue": 700
-                },
-                {
-                  "name": "zDist",
-                  "ioValue": 0
-                }
-              ]
-            },
-            {
-              "atomType": "ShrinkWrap",
-              "x": 0.42526455026455023,
-              "y": 0.20891364902506962,
-              "uniqueID": "id-3288",
-              "name": "Shrink Wrap",
-              "ioValues": [
-                {
-                  "name": "Shape 1",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Shape 2",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Shape 3",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Shape 1",
-                  "ioValue": {
-                    "geometry": "move-move-circle-750-0-1000-0-0-700-0",
-                    "dimension": "2D",
-                    "tags": [],
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "bom": []
-                  }
-                },
-                {
-                  "name": "Shape 2",
-                  "ioValue": {
-                    "geometry": "circle-750",
-                    "dimension": "2D",
-                    "tags": [],
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "bom": []
-                  }
-                },
-                {
-                  "name": "Shape 3",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                }
-              ]
-            },
-            {
-              "atomType": "Fusion",
-              "x": 0.4358465608465608,
-              "y": 0.5543175487465182,
-              "uniqueID": "id-3293",
-              "ioValues": [
-                {
-                  "name": "Shape 1",
-                  "ioValue": {
-                    "geometry": "shrinkWrap-fuse-circle-750-move-move-circle-750-0-1000-0-0-700-0-50",
-                    "dimension": "2D",
-                    "tags": [],
-                    "color": "#aad7f2",
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "bom": [
-                      []
-                    ]
-                  }
-                },
-                {
-                  "name": "Shape 2",
-                  "ioValue": {
-                    "geometry": "shrinkWrap-fuse-move-circle-750-0-1000-0-move-rectangle-2438.3999999999996-1524-0--100-0-50",
-                    "dimension": "2D",
-                    "tags": [],
-                    "color": "#aad7f2",
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "bom": [
-                      []
-                    ]
-                  }
-                }
-              ],
-              "unionType": "Fusion"
             },
             {
               "atomType": "GitHubMolecule",
@@ -5733,75 +5442,60 @@
             },
             {
               "atomType": "Code",
-              "x": 0.1832010582010582,
-              "y": 0.7938718662952646,
+              "x": 0.2744708994708995,
+              "y": 0.5348189415041783,
               "uniqueID": "id-5209",
               "ioValues": [
                 {
-                  "name": "width",
-                  "ioValue": 40
-                },
-                {
-                  "name": "depth",
-                  "ioValue": 30
-                },
-                {
-                  "name": "thickness",
-                  "ioValue": 5
-                },
-                {
-                  "name": "holeRadius",
-                  "ioValue": 6
-                },
-                {
-                  "name": "color",
-                  "ioValue": "#5B9BD5",
-                  "currentEquation": "#5B9BD5"
-                },
-                {
-                  "name": "addFillet",
-                  "ioValue": true
-                },
-                {
-                  "name": "extra",
+                  "name": "shapeA",
                   "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "shapeB",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "curveDepth",
+                  "ioValue": 100,
+                  "currentEquation": "100"
+                },
+                {
+                  "name": "pinchInward",
+                  "ioValue": true
                 }
               ],
               "interpreterVersion": 1,
-              "code": "/**\n * Catenary Shrink Wrap — Abundance code atom.\n *\n * Works like the built-in \"Shrink Wrap\" (convex hull / \"hull\") atom: it joins\n * two or more 2D sketches into a single outline. The difference is in how the\n * gaps *between* the shapes are bridged. The regular shrink wrap connects the\n * shapes with straight tangent lines; this atom bridges them with catenary\n * curves (the shape a slack chain/rope takes when hung between two points),\n * so the wrap sags between the parts instead of running straight.\n *\n * How it works:\n *   1. Densely sample the outline of every connected 2D input, tagging each\n *      sample with the index of the shape it came from.\n *   2. Build the convex hull of all the samples (Andrew's monotone chain).\n *   3. Walk the hull. Hull edges whose two endpoints belong to the *same*\n *      input shape are kept as straight segments (they trace that shape's\n *      silhouette). Hull edges that jump from one input shape to another are\n *      the \"bridges\" — each is replaced by a catenary curve.\n *\n * Connect two (or more) 2D sketches to the shape inputs. Non-convex shapes are\n * wrapped by their convex hull, exactly like the standard shrink wrap.\n *\n * @param shapeA      First 2D sketch (required).\n * @param shapeB      Second 2D sketch (required).\n * @param shapeC      Optional third 2D sketch.\n * @param shapeD      Optional fourth 2D sketch.\n * @param curveDepth  Maximum sag of each catenary bridge, in mm, measured",
-              "compiledCode": "\"use strict\";\n/**\n * Catenary Shrink Wrap — Abundance code atom.\n *\n * Works like the built-in \"Shrink Wrap\" (convex hull / \"hull\") atom: it joins\n * two or more 2D sketches into a single outline. The difference is in how the\n * gaps *between* the shapes are bridged. The regular shrink wrap connects the\n * shapes with straight tangent lines; this atom bridges them with catenary\n * curves (the shape a slack chain/rope takes when hung between two points),\n * so the wrap sags between the parts instead of running straight.\n *\n * How it works:\n *   1. Densely sample the outline of every connected 2D input, tagging each\n *      sample with the index of the shape it came from.\n *   2. Build the convex hull of all the samples (Andrew's monotone chain).\n *   3. Walk the hull. Hull edges whose two endpoints belong to the *same*\n *      input shape are kept as straight segments (they trace that shape's\n *      silhouette). Hull edges that jump from one input shape to another are\n *      the \"bridges\" — each is replaced by a catenary curve.\n *\n * Connect two (or more) 2D sketches to the shape inputs. Non-convex shapes are\n * wrapped by their convex hull, exactly like the standard shrink wrap.\n *\n * @param shapeA      First 2D sketch (required).\n * @param shapeB      Second 2D sketch (required).\n * @param shapeC      Optional third 2D sketch.\n * @param shapeD      Optional fourth 2D sketch.\n * @param curveDepth  Maximum sag of each catenary bridge, in mm, measured \n"
+              "code": "/**\n * Catenary Shrink Wrap — Abundance code atom.\n *\n * Works like the built-in \"Shrink Wrap\" (convex hull / \"hull\") atom: it joins\n * two or more 2D sketches into a single outline. The difference is in how the\n * gaps *between* the shapes are bridged. The regular shrink wrap connects the\n * shapes with straight tangent lines; this atom bridges them with catenary\n * curves (the shape a slack chain/rope takes when hung between two points),\n * so the wrap sags between the parts instead of running straight.\n *\n * How it works:\n *   1. Densely sample the outline of every connected 2D input, tagging each\n *      sample with the index of the shape it came from.\n *   2. Build the convex hull of all the samples (Andrew's monotone chain).\n *   3. Walk the hull. Hull edges whose two endpoints belong to the *same*\n *      input shape are kept as straight segments (they trace that shape's\n *      silhouette). Hull edges that jump from one input shape to another are\n *      the \"bridges\" — each is replaced by a catenary curve.\n *\n * Connect two 2D sketches to the shape inputs. Non-convex shapes are wrapped\n * by their convex hull, exactly like the standard shrink wrap.\n *\n * @param shapeA      First 2D sketch (required).\n * @param shapeB      Second 2D sketch (required).\n * @param curveDepth  Maximum sag of each catenary bridge, in mm, measured\n *                    perpendicular to the straight bridge it replaces.\n * @param pinchInward When true the bridges sag *toward* the centre (a tight,\n *                    shrink-wrapped look). When false they bulge outward.\n */\nfunction run(\n  shapeA: Assembly | undefined = undefined,\n  shapeB: Assembly | undefined = undefined,\n  curveDepth: number = 15,\n  pinchInward: boolean = true,\n): Assembly {\n  const shapes = [shapeA, shapeB].filter((s): s is Assembly => !!s);\n\n  if (shapes.length < 2) {\n    throw new Error(\n      \"Catenary shrink wrap needs both 2D sketches connected.\",\n    );\n  }\n\n  // Number of samples taken along each individual outline curve. Higher =\n  // smoother approximation of curved shapes, at the cost of more hull points.\n  const SAMPLES_PER_CURVE = 64;\n  // Number of straight segments used to approximate each catenary bridge.\n  const CATENARY_SEGMENTS = 48;\n\n  type Pt = { x: number; y: number; owner: number };\n\n  // --- 1. Gather boundary points from every input, tagged by owner shape ---\n\n  // Pull the flat list of 2D curves out of a replicad Drawing (handling the\n  // Blueprint / Blueprints / CompoundBlueprint nesting that fused drawings can\n  // produce).\n  const curvesOf = (drawing: any): any[] => {\n    const out: any[] = [];\n    let root: any = null;\n    try {\n      root = drawing.blueprint;\n    } catch (e) {\n      root = null;\n    }\n    const stack: any[] = [];\n    if (root) stack.push(root);\n    if (drawing.blueprints) stack.push(...drawing.blueprints);\n    while (stack.length) {\n      const item = stack.pop();\n      if (!item) continue;\n      if (item.curves) out.push(...item.curves);\n      else if (item.blueprints) stack.push(...item.blueprints);\n    }\n    return out;\n  };\n\n  const points: Pt[] = [];\n\n  const collect = (assembly: Assembly, owner: number): void => {\n    const geom: any = assembly.geometry;\n    if (Array.isArray(geom)) {\n      for (const child of geom) collect(child, owner);\n      return;\n    }\n    // Leaf geometry must be a 2D Drawing (has blueprint curves). A 3D solid\n    // exposes `_wrapped` and no blueprint, so it yields no curves.\n    const curves = curvesOf(geom);\n    if (curves.length === 0) {\n      throw new Error(\n        \"Catenary shrink wrap inputs must be 2D sketches, not 3D shapes.\",\n      );\n    }\n    for (const curve of curves) {\n      const a = curve.firstParameter;\n      const b = curve.lastParameter;\n      for (let i = 0; i < SAMPLES_PER_CURVE; i++) {\n        const t = a + ((b - a) * i) / SAMPLES_PER_CURVE;\n        const [x, y] = curve.value(t);\n        points.push({ x, y, owner });\n      }\n    }\n  };\n\n  shapes.forEach((shape, index) => collect(shape, index));\n\n  if (points.length < 3) {\n    throw new Error(\"Not enough geometry to wrap.\");\n  }\n\n  // --- 2. Convex hull (Andrew's monotone chain), keeping owner tags ---\n\n  const cross = (o: Pt, a: Pt, b: Pt): number =>\n    (a.x - o.x) * (b.y - o.y) - (a.y - o.y) * (b.x - o.x);\n\n  const sorted = points\n    .slice()\n    .sort((p, q) => (p.x === q.x ? p.y - q.y : p.x - q.x));\n\n  const lower: Pt[] = [];\n  for (const p of sorted) {\n    while (\n      lower.length >= 2 &&\n      cross(lower[lower.length - 2], lower[lower.length - 1], p) <= 0\n    ) {\n      lower.pop();\n    }\n    lower.push(p);\n  }\n\n  const upper: Pt[] = [];\n  for (let i = sorted.length - 1; i >= 0; i--) {\n    const p = sorted[i];\n    while (\n      upper.length >= 2 &&\n      cross(upper[upper.length - 2], upper[upper.length - 1], p) <= 0\n    ) {\n      upper.pop();\n    }\n    upper.push(p);\n  }\n\n  lower.pop();\n  upper.pop();\n  const hull: Pt[] = lower.concat(upper); // counter-clockwise\n\n  if (hull.length < 3) {\n    throw new Error(\"Shapes are collinear; nothing to wrap.\");\n  }\n\n  // Centroid of the hull, used to decide which way \"inward\" is for the sag.\n  const centroid = hull.reduce(\n    (acc, p) => ({ x: acc.x + p.x / hull.length, y: acc.y + p.y / hull.length }),\n    { x: 0, y: 0 },\n  );\n\n  // --- 3. Catenary helper ---\n\n  // Solve for the catenary parameter `a` such that the sag at the midpoint of a\n  // chord of half-span L equals `s`:  s = a * (cosh(L / a) - 1).\n  // g(a) is monotonically decreasing in a, so a simple bisection converges.\n  const solveCatenaryA = (L: number, s: number): number => {\n    if (s <= 1e-6 || L <= 1e-9) return Infinity; // effectively straight\n    let lo = 1e-4;\n    let hi = 1e6;\n    for (let i = 0; i < 100; i++) {\n      const mid = (lo + hi) / 2;\n      const val = mid * (Math.cosh(L / mid) - 1);\n      if (val > s) lo = mid;\n      else hi = mid;\n    }\n    return (lo + hi) / 2;\n  };\n\n  // Produce the interior points of the catenary bridge from A to B (endpoints\n  // excluded — they are already hull vertices). The curve deflects toward or\n  // away from the centroid according to `pinchInward`.\n  const catenaryBridge = (A: Pt, B: Pt): Array<[number, number]> => {\n    const dx = B.x - A.x;\n    const dy = B.y - A.y;\n    const span = Math.hypot(dx, dy);\n    if (span < 1e-9) return [];\n\n    const L = span / 2;\n    const a = solveCatenaryA(L, Math.abs(curveDepth));\n    if (!isFinite(a)) return []; // straight line\n\n    // Unit chord direction and one perpendicular.\n    const ux = dx / span;\n    const uy = dy / span;\n    let nx = -uy;\n    let ny = ux;\n\n    // Orient the perpendicular toward the centroid, then flip if the user\n    // wants the bridge to bulge outward instead of pinch in.\n    const midX = (A.x + B.x) / 2;\n    const midY = (A.y + B.y) / 2;\n    const towardCentre = nx * (centroid.x - midX) + ny * (centroid.y - midY);\n    if (towardCentre < 0) {\n      nx = -nx;\n      ny = -ny;\n    }\n    if (!pinchInward) {\n      nx = -nx;\n      ny = -ny;\n    }\n\n    const coshLoverA = Math.cosh(L / a);\n    const pts: Array<[number, number]> = [];\n    for (let i = 1; i < CATENARY_SEGMENTS; i++) {\n      const t = i / CATENARY_SEGMENTS;\n      const localX = -L + t * span; // runs -L .. +L\n      const offset = a * (coshLoverA - Math.cosh(localX / a)); // 0 at ends, s at centre\n      const baseX = A.x + t * dx;\n      const baseY = A.y + t * dy;\n      pts.push([baseX + nx * offset, baseY + ny * offset]);\n    }\n    return pts;\n  };\n\n  // --- 4. Walk the hull, expanding cross-shape edges into catenary bridges ---\n\n  const outline: Array<[number, number]> = [[hull[0].x, hull[0].y]];\n  for (let i = 0; i < hull.length; i++) {\n    const a = hull[i];\n    const b = hull[(i + 1) % hull.length];\n    if (a.owner !== b.owner) {\n      // Bridge between two different shapes -> catenary curve.\n      for (const p of catenaryBridge(a, b)) outline.push(p);\n    }\n    // Straight segment to the next hull vertex (same shape, or the bridge end).\n    outline.push([b.x, b.y]);\n  }\n  // The final point duplicates the start vertex; drop it before closing.\n  outline.pop();\n\n  // --- 5. Build the closed 2D drawing ---\n\n  let pen = replicad.draw(outline[0]);\n  for (let i = 1; i < outline.length; i++) {\n    pen = pen.lineTo(outline[i]);\n  }\n  const wrapped = pen.close();\n\n  return new Assembly({\n    geometry: wrapped,\n    tags: [\"shrink-wrap\", \"catenary\"],\n    bom: [`Catenary shrink wrap of ${shapes.length} sketches`],\n  });\n}\n",
+              "compiledCode": "\"use strict\";\n/**\n * Catenary Shrink Wrap — Abundance code atom.\n *\n * Works like the built-in \"Shrink Wrap\" (convex hull / \"hull\") atom: it joins\n * two or more 2D sketches into a single outline. The difference is in how the\n * gaps *between* the shapes are bridged. The regular shrink wrap connects the\n * shapes with straight tangent lines; this atom bridges them with catenary\n * curves (the shape a slack chain/rope takes when hung between two points),\n * so the wrap sags between the parts instead of running straight.\n *\n * How it works:\n *   1. Densely sample the outline of every connected 2D input, tagging each\n *      sample with the index of the shape it came from.\n *   2. Build the convex hull of all the samples (Andrew's monotone chain).\n *   3. Walk the hull. Hull edges whose two endpoints belong to the *same*\n *      input shape are kept as straight segments (they trace that shape's\n *      silhouette). Hull edges that jump from one input shape to another are\n *      the \"bridges\" — each is replaced by a catenary curve.\n *\n * Connect two 2D sketches to the shape inputs. Non-convex shapes are wrapped\n * by their convex hull, exactly like the standard shrink wrap.\n *\n * @param shapeA      First 2D sketch (required).\n * @param shapeB      Second 2D sketch (required).\n * @param curveDepth  Maximum sag of each catenary bridge, in mm, measured\n *                    perpendicular to the straight bridge it replaces.\n * @param pinchInward When true the bridges sag *toward* the centre (a tight,\n *                    shrink-wrapped look). When false they bulge outward.\n */\nfunction run(shapeA = undefined, shapeB = undefined, curveDepth = 15, pinchInward = true) {\n    const shapes = [shapeA, shapeB].filter((s) => !!s);\n    if (shapes.length < 2) {\n        throw new Error(\"Catenary shrink wrap needs both 2D sketches connected.\");\n    }\n    // Number of samples taken along each individual outline curve. Higher =\n    // smoother approximation of curved shapes, at the cost of more hull points.\n    const SAMPLES_PER_CURVE = 64;\n    // Number of straight segments used to approximate each catenary bridge.\n    const CATENARY_SEGMENTS = 48;\n    // --- 1. Gather boundary points from every input, tagged by owner shape ---\n    // Pull the flat list of 2D curves out of a replicad Drawing (handling the\n    // Blueprint / Blueprints / CompoundBlueprint nesting that fused drawings can\n    // produce).\n    const curvesOf = (drawing) => {\n        const out = [];\n        let root = null;\n        try {\n            root = drawing.blueprint;\n        }\n        catch (e) {\n            root = null;\n        }\n        const stack = [];\n        if (root)\n            stack.push(root);\n        if (drawing.blueprints)\n            stack.push(...drawing.blueprints);\n        while (stack.length) {\n            const item = stack.pop();\n            if (!item)\n                continue;\n            if (item.curves)\n                out.push(...item.curves);\n            else if (item.blueprints)\n                stack.push(...item.blueprints);\n        }\n        return out;\n    };\n    const points = [];\n    const collect = (assembly, owner) => {\n        const geom = assembly.geometry;\n        if (Array.isArray(geom)) {\n            for (const child of geom)\n                collect(child, owner);\n            return;\n        }\n        // Leaf geometry must be a 2D Drawing (has blueprint curves). A 3D solid\n        // exposes `_wrapped` and no blueprint, so it yields no curves.\n        const curves = curvesOf(geom);\n        if (curves.length === 0) {\n            throw new Error(\"Catenary shrink wrap inputs must be 2D sketches, not 3D shapes.\");\n        }\n        for (const curve of curves) {\n            const a = curve.firstParameter;\n            const b = curve.lastParameter;\n            for (let i = 0; i < SAMPLES_PER_CURVE; i++) {\n                const t = a + ((b - a) * i) / SAMPLES_PER_CURVE;\n                const [x, y] = curve.value(t);\n                points.push({ x, y, owner });\n            }\n        }\n    };\n    shapes.forEach((shape, index) => collect(shape, index));\n    if (points.length < 3) {\n        throw new Error(\"Not enough geometry to wrap.\");\n    }\n    // --- 2. Convex hull (Andrew's monotone chain), keeping owner tags ---\n    const cross = (o, a, b) => (a.x - o.x) * (b.y - o.y) - (a.y - o.y) * (b.x - o.x);\n    const sorted = points\n        .slice()\n        .sort((p, q) => (p.x === q.x ? p.y - q.y : p.x - q.x));\n    const lower = [];\n    for (const p of sorted) {\n        while (lower.length >= 2 &&\n            cross(lower[lower.length - 2], lower[lower.length - 1], p) <= 0) {\n            lower.pop();\n        }\n        lower.push(p);\n    }\n    const upper = [];\n    for (let i = sorted.length - 1; i >= 0; i--) {\n        const p = sorted[i];\n        while (upper.length >= 2 &&\n            cross(upper[upper.length - 2], upper[upper.length - 1], p) <= 0) {\n            upper.pop();\n        }\n        upper.push(p);\n    }\n    lower.pop();\n    upper.pop();\n    const hull = lower.concat(upper); // counter-clockwise\n    if (hull.length < 3) {\n        throw new Error(\"Shapes are collinear; nothing to wrap.\");\n    }\n    // Centroid of the hull, used to decide which way \"inward\" is for the sag.\n    const centroid = hull.reduce((acc, p) => ({ x: acc.x + p.x / hull.length, y: acc.y + p.y / hull.length }), { x: 0, y: 0 });\n    // --- 3. Catenary helper ---\n    // Solve for the catenary parameter `a` such that the sag at the midpoint of a\n    // chord of half-span L equals `s`:  s = a * (cosh(L / a) - 1).\n    // g(a) is monotonically decreasing in a, so a simple bisection converges.\n    const solveCatenaryA = (L, s) => {\n        if (s <= 1e-6 || L <= 1e-9)\n            return Infinity; // effectively straight\n        let lo = 1e-4;\n        let hi = 1e6;\n        for (let i = 0; i < 100; i++) {\n            const mid = (lo + hi) / 2;\n            const val = mid * (Math.cosh(L / mid) - 1);\n            if (val > s)\n                lo = mid;\n            else\n                hi = mid;\n        }\n        return (lo + hi) / 2;\n    };\n    // Produce the interior points of the catenary bridge from A to B (endpoints\n    // excluded — they are already hull vertices). The curve deflects toward or\n    // away from the centroid according to `pinchInward`.\n    const catenaryBridge = (A, B) => {\n        const dx = B.x - A.x;\n        const dy = B.y - A.y;\n        const span = Math.hypot(dx, dy);\n        if (span < 1e-9)\n            return [];\n        const L = span / 2;\n        const a = solveCatenaryA(L, Math.abs(curveDepth));\n        if (!isFinite(a))\n            return []; // straight line\n        // Unit chord direction and one perpendicular.\n        const ux = dx / span;\n        const uy = dy / span;\n        let nx = -uy;\n        let ny = ux;\n        // Orient the perpendicular toward the centroid, then flip if the user\n        // wants the bridge to bulge outward instead of pinch in.\n        const midX = (A.x + B.x) / 2;\n        const midY = (A.y + B.y) / 2;\n        const towardCentre = nx * (centroid.x - midX) + ny * (centroid.y - midY);\n        if (towardCentre < 0) {\n            nx = -nx;\n            ny = -ny;\n        }\n        if (!pinchInward) {\n            nx = -nx;\n            ny = -ny;\n        }\n        const coshLoverA = Math.cosh(L / a);\n        const pts = [];\n        for (let i = 1; i < CATENARY_SEGMENTS; i++) {\n            const t = i / CATENARY_SEGMENTS;\n            const localX = -L + t * span; // runs -L .. +L\n            const offset = a * (coshLoverA - Math.cosh(localX / a)); // 0 at ends, s at centre\n            const baseX = A.x + t * dx;\n            const baseY = A.y + t * dy;\n            pts.push([baseX + nx * offset, baseY + ny * offset]);\n        }\n        return pts;\n    };\n    // --- 4. Walk the hull, expanding cross-shape edges into catenary bridges ---\n    const outline = [[hull[0].x, hull[0].y]];\n    for (let i = 0; i < hull.length; i++) {\n        const a = hull[i];\n        const b = hull[(i + 1) % hull.length];\n        if (a.owner !== b.owner) {\n            // Bridge between two different shapes -> catenary curve.\n            for (const p of catenaryBridge(a, b))\n                outline.push(p);\n        }\n        // Straight segment to the next hull vertex (same shape, or the bridge end).\n        outline.push([b.x, b.y]);\n    }\n    // The final point duplicates the start vertex; drop it before closing.\n    outline.pop();\n    // --- 5. Build the closed 2D drawing ---\n    let pen = replicad.draw(outline[0]);\n    for (let i = 1; i < outline.length; i++) {\n        pen = pen.lineTo(outline[i]);\n    }\n    const wrapped = pen.close();\n    return new Assembly({\n        geometry: wrapped,\n        tags: [\"shrink-wrap\", \"catenary\"],\n        bom: [`Catenary shrink wrap of ${shapes.length} sketches`],\n    });\n}\n"
+            },
+            {
+              "atomType": "Rectangle",
+              "x": 0.08796296296296297,
+              "y": 0.5766016713091923,
+              "uniqueID": "id-5224",
+              "ioValues": [
+                {
+                  "name": "x length",
+                  "ioValue": 1000,
+                  "currentEquation": "1000"
+                },
+                {
+                  "name": "y length",
+                  "ioValue": 10
+                }
+              ]
             }
           ],
           "allConnectors": [
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-493",
-              "ap2ID": "id-3262"
-            },
             {
               "ap2Name": "geometry",
               "ap1ID": "id-494",
               "ap2ID": "id-495"
             },
             {
-              "ap2Name": "Shape 2",
-              "ap1ID": "id-494",
-              "ap2ID": "id-3288"
-            },
-            {
-              "ap2Name": "Shape 1",
+              "ap2Name": "shapeA",
               "ap1ID": "id-495",
-              "ap2ID": "id-496"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-495",
-              "ap2ID": "id-3282"
-            },
-            {
-              "ap2Name": "Shape 2",
-              "ap1ID": "id-496",
-              "ap2ID": "id-3293"
+              "ap2ID": "id-5209"
             },
             {
               "ap2Name": "Shape",
@@ -5834,11 +5528,6 @@
               "ap2ID": "id-1061"
             },
             {
-              "ap2Name": "Shape 2",
-              "ap1ID": "id-3262",
-              "ap2ID": "id-496"
-            },
-            {
               "ap2Name": "geometry",
               "ap1ID": "id-3268",
               "ap2ID": "id-3272"
@@ -5854,21 +5543,6 @@
               "ap2ID": "id-3258"
             },
             {
-              "ap2Name": "Shape 1",
-              "ap1ID": "id-3282",
-              "ap2ID": "id-3288"
-            },
-            {
-              "ap2Name": "Shape 1",
-              "ap1ID": "id-3288",
-              "ap2ID": "id-3293"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-3293",
-              "ap2ID": "id-497"
-            },
-            {
               "ap2Name": "retain",
               "ap1ID": "id-2273",
               "ap2ID": "id-3278"
@@ -5882,6 +5556,11 @@
               "ap2Name": "2D_Shape",
               "ap1ID": "id-3062",
               "ap2ID": "id-2273"
+            },
+            {
+              "ap2Name": "shapeB",
+              "ap1ID": "id-5224",
+              "ap2ID": "id-5209"
             }
           ],
           "fileTypeVersion": 1
