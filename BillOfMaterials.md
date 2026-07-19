@@ -3,4 +3,5 @@
  |Part|Number Needed|Price|Source| 
  |----|----------|-----|-----|
 |New Item|1|$0.00||
-|Total: |1|$0.00| |
+|96 2x6|3|$0.00||
+|Total: |4|$0.00| |
