@@ -206,8 +206,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.6435185185185185,
-      "y": 0.7270194986072424,
+      "x": 0.6481481481481481,
+      "y": 0.7158774373259054,
       "uniqueID": "id-1214",
       "name": "Person-For-Scale",
       "topLevel": false,
@@ -1881,8 +1881,7 @@
             },
             {
               "name": "zDist",
-              "ioValue": 1700,
-              "currentEquation": "1700"
+              "ioValue": 1700
             }
           ]
         },
@@ -1908,14 +1907,14 @@
             },
             {
               "atomType": "Circle",
-              "x": 0.18716931216931218,
-              "y": 0.43732590529247906,
+              "x": 0.18915343915343916,
+              "y": 0.4512534818941504,
               "uniqueID": "id-647",
               "ioValues": [
                 {
                   "name": "diameter",
-                  "ioValue": 889,
-                  "currentEquation": "35*25.4"
+                  "ioValue": 1143,
+                  "currentEquation": "45*25.4"
                 }
               ]
             },
@@ -1945,13 +1944,14 @@
             },
             {
               "atomType": "Rectangle",
-              "x": 0.1765873015873016,
-              "y": 0.7938718662952646,
+              "x": 0.17923280423280424,
+              "y": 0.8133704735376045,
               "uniqueID": "id-649",
               "ioValues": [
                 {
                   "name": "x length",
-                  "ioValue": 1000
+                  "ioValue": 1500,
+                  "currentEquation": "1500"
                 },
                 {
                   "name": "y length",
@@ -1992,7 +1992,7 @@
                 {
                   "name": "Shape 1",
                   "ioValue": {
-                    "geometry": "rotate-rectangle-1000-25-0-0-90",
+                    "geometry": "rotate-rectangle-1500-25-0-0-90",
                     "dimension": "2D",
                     "plane": {
                       "origin": [
@@ -2019,7 +2019,7 @@
                 {
                   "name": "Shape 2",
                   "ioValue": {
-                    "geometry": "rectangle-1000-25",
+                    "geometry": "rectangle-1500-25",
                     "dimension": "2D",
                     "plane": {
                       "origin": [
@@ -2859,8 +2859,8 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.06547619047619048,
-          "y": 0.41225626740947074,
+          "x": 0.06878306878306878,
+          "y": 0.403899721448468,
           "uniqueID": "id-491",
           "name": "Face",
           "topLevel": false,
@@ -2903,7 +2903,8 @@
               "ioValues": [
                 {
                   "name": "diameter",
-                  "ioValue": 1280
+                  "ioValue": 1300,
+                  "currentEquation": "1300"
                 }
               ]
             },
@@ -2953,7 +2954,7 @@
                 {
                   "name": "Shape 1",
                   "ioValue": {
-                    "geometry": "move-circle-640-0-1000-0",
+                    "geometry": "move-circle-650-0-1000-0",
                     "dimension": "2D",
                     "tags": [],
                     "plane": {
@@ -3237,7 +3238,7 @@
                 {
                   "name": "Shape 1",
                   "ioValue": {
-                    "geometry": "move-move-circle-640-0-1000-0-0-700-0",
+                    "geometry": "move-move-circle-650-0-1000-0-0-700-0",
                     "dimension": "2D",
                     "tags": [],
                     "plane": {
@@ -3264,7 +3265,7 @@
                 {
                   "name": "Shape 2",
                   "ioValue": {
-                    "geometry": "circle-640",
+                    "geometry": "circle-650",
                     "dimension": "2D",
                     "tags": [],
                     "plane": {
@@ -3303,7 +3304,7 @@
                 {
                   "name": "Shape 1",
                   "ioValue": {
-                    "geometry": "shrinkWrap-fuse-circle-640-move-move-circle-640-0-1000-0-0-700-0-50",
+                    "geometry": "shrinkWrap-fuse-circle-650-move-move-circle-650-0-1000-0-0-700-0-50",
                     "dimension": "2D",
                     "tags": [],
                     "color": "#aad7f2",
@@ -3332,7 +3333,7 @@
                 {
                   "name": "Shape 2",
                   "ioValue": {
-                    "geometry": "shrinkWrap-fuse-move-circle-640-0-1000-0-move-rectangle-2438.3999999999996-1524-0--100-0-50",
+                    "geometry": "shrinkWrap-fuse-move-circle-650-0-1000-0-move-rectangle-2438.3999999999996-1524-0--100-0-50",
                     "dimension": "2D",
                     "tags": [],
                     "color": "#aad7f2",
@@ -7542,6 +7543,45 @@
             }
           ],
           "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Circle",
+          "x": 0.7797619047619048,
+          "y": 0.7827298050139275,
+          "uniqueID": "id-4194",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 1219.1999999999998,
+              "currentEquation": "48*25.4"
+            }
+          ]
+        },
+        {
+          "atomType": "Rotate",
+          "x": 0.8386243386243387,
+          "y": 0.8384401114206128,
+          "uniqueID": "id-4197",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "x-axis degrees",
+              "ioValue": 90,
+              "currentEquation": "90"
+            },
+            {
+              "name": "y-axis degrees",
+              "ioValue": 0,
+              "currentEquation": "0"
+            },
+            {
+              "name": "z-axis degrees",
+              "ioValue": 0
+            }
+          ]
         }
       ],
       "allConnectors": [
@@ -7619,6 +7659,11 @@
           "ap2Name": "geometry",
           "ap1ID": "id-739",
           "ap2ID": "id-1045"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-4194",
+          "ap2ID": "id-4197"
         }
       ],
       "fileTypeVersion": 1
