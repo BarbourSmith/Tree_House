@@ -5730,6 +5730,46 @@
               "unitsKey": "MM",
               "fileTypeVersion": 1,
               "lastReloadedFromGithubAt": 1784437005928
+            },
+            {
+              "atomType": "Code",
+              "x": 0.1832010582010582,
+              "y": 0.7938718662952646,
+              "uniqueID": "id-5209",
+              "ioValues": [
+                {
+                  "name": "width",
+                  "ioValue": 40
+                },
+                {
+                  "name": "depth",
+                  "ioValue": 30
+                },
+                {
+                  "name": "thickness",
+                  "ioValue": 5
+                },
+                {
+                  "name": "holeRadius",
+                  "ioValue": 6
+                },
+                {
+                  "name": "color",
+                  "ioValue": "#5B9BD5",
+                  "currentEquation": "#5B9BD5"
+                },
+                {
+                  "name": "addFillet",
+                  "ioValue": true
+                },
+                {
+                  "name": "extra",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/**\n * Catenary Shrink Wrap — Abundance code atom.\n *\n * Works like the built-in \"Shrink Wrap\" (convex hull / \"hull\") atom: it joins\n * two or more 2D sketches into a single outline. The difference is in how the\n * gaps *between* the shapes are bridged. The regular shrink wrap connects the\n * shapes with straight tangent lines; this atom bridges them with catenary\n * curves (the shape a slack chain/rope takes when hung between two points),\n * so the wrap sags between the parts instead of running straight.\n *\n * How it works:\n *   1. Densely sample the outline of every connected 2D input, tagging each\n *      sample with the index of the shape it came from.\n *   2. Build the convex hull of all the samples (Andrew's monotone chain).\n *   3. Walk the hull. Hull edges whose two endpoints belong to the *same*\n *      input shape are kept as straight segments (they trace that shape's\n *      silhouette). Hull edges that jump from one input shape to another are\n *      the \"bridges\" — each is replaced by a catenary curve.\n *\n * Connect two (or more) 2D sketches to the shape inputs. Non-convex shapes are\n * wrapped by their convex hull, exactly like the standard shrink wrap.\n *\n * @param shapeA      First 2D sketch (required).\n * @param shapeB      Second 2D sketch (required).\n * @param shapeC      Optional third 2D sketch.\n * @param shapeD      Optional fourth 2D sketch.\n * @param curveDepth  Maximum sag of each catenary bridge, in mm, measured",
+              "compiledCode": "\"use strict\";\n/**\n * Catenary Shrink Wrap — Abundance code atom.\n *\n * Works like the built-in \"Shrink Wrap\" (convex hull / \"hull\") atom: it joins\n * two or more 2D sketches into a single outline. The difference is in how the\n * gaps *between* the shapes are bridged. The regular shrink wrap connects the\n * shapes with straight tangent lines; this atom bridges them with catenary\n * curves (the shape a slack chain/rope takes when hung between two points),\n * so the wrap sags between the parts instead of running straight.\n *\n * How it works:\n *   1. Densely sample the outline of every connected 2D input, tagging each\n *      sample with the index of the shape it came from.\n *   2. Build the convex hull of all the samples (Andrew's monotone chain).\n *   3. Walk the hull. Hull edges whose two endpoints belong to the *same*\n *      input shape are kept as straight segments (they trace that shape's\n *      silhouette). Hull edges that jump from one input shape to another are\n *      the \"bridges\" — each is replaced by a catenary curve.\n *\n * Connect two (or more) 2D sketches to the shape inputs. Non-convex shapes are\n * wrapped by their convex hull, exactly like the standard shrink wrap.\n *\n * @param shapeA      First 2D sketch (required).\n * @param shapeB      Second 2D sketch (required).\n * @param shapeC      Optional third 2D sketch.\n * @param shapeD      Optional fourth 2D sketch.\n * @param curveDepth  Maximum sag of each catenary bridge, in mm, measured \n"
             }
           ],
           "allConnectors": [
