@@ -1101,8 +1101,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.16997354497354497,
-      "y": 0.6963788300835655,
+      "x": 0.17063492063492064,
+      "y": 0.6880222841225626,
       "uniqueID": "id-487",
       "name": "Tree House",
       "topLevel": false,
@@ -4938,7 +4938,7 @@
     {
       "atomType": "GitHubMolecule",
       "x": 0.6342592592592592,
-      "y": 0.6935933147632313,
+      "y": 0.7409470752089137,
       "uniqueID": "id-1214",
       "name": "Person-For-Scale",
       "topLevel": false,
