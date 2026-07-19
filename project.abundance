@@ -1639,8 +1639,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.17063492063492064,
-      "y": 0.6880222841225626,
+      "x": 0.17394179894179893,
+      "y": 0.6713091922005571,
       "uniqueID": "id-487",
       "name": "Tree House",
       "topLevel": false,
@@ -1747,8 +1747,8 @@
         },
         {
           "atomType": "Move",
-          "x": 0.4887566137566138,
-          "y": 0.7938718662952646,
+          "x": 0.48280423280423285,
+          "y": 0.7855153203342619,
           "uniqueID": "id-727",
           "ioValues": [
             {
@@ -1781,10 +1781,6 @@
             },
             {
               "name": "Shape 2",
-              "ioValue": null
-            },
-            {
-              "name": "Shape 3",
               "ioValue": null
             },
             {
@@ -1892,7 +1888,7 @@
         {
           "atomType": "Molecule",
           "x": 0.06547619047619048,
-          "y": 0.38440111420612816,
+          "y": 0.41225626740947074,
           "uniqueID": "id-491",
           "name": "Face",
           "topLevel": false,
@@ -1965,8 +1961,8 @@
             },
             {
               "atomType": "ShrinkWrap",
-              "x": 0.3353174603174603,
-              "y": 0.32869080779944293,
+              "x": 0.33002645502645506,
+              "y": 0.40111420612813375,
               "uniqueID": "id-496",
               "name": "Shrink Wrap",
               "ioValues": [
@@ -2060,8 +2056,8 @@
             },
             {
               "atomType": "Rectangle",
-              "x": 0.29828042328042326,
-              "y": 0.8217270194986073,
+              "x": 0.30753968253968256,
+              "y": 0.8245125348189415,
               "uniqueID": "id-510",
               "ioValues": [
                 {
@@ -2070,7 +2066,8 @@
                 },
                 {
                   "name": "y length",
-                  "ioValue": 400
+                  "ioValue": 1000,
+                  "currentEquation": "1000"
                 }
               ]
             },
@@ -2092,8 +2089,8 @@
             },
             {
               "atomType": "Move",
-              "x": 0.5833333333333334,
-              "y": 0.9108635097493036,
+              "x": 0.5542328042328043,
+              "y": 0.7799442896935932,
               "uniqueID": "id-512",
               "ioValues": [
                 {
@@ -2106,7 +2103,8 @@
                 },
                 {
                   "name": "yDist",
-                  "ioValue": 700
+                  "ioValue": 1000,
+                  "currentEquation": "1000"
                 },
                 {
                   "name": "zDist",
@@ -2126,53 +2124,6 @@
                 }
               ],
               "selectedColor": "Purple"
-            },
-            {
-              "atomType": "Move",
-              "x": 0.416005291005291,
-              "y": 0.6239554317548747,
-              "uniqueID": "id-2245",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "xDist",
-                  "ioValue": 0
-                },
-                {
-                  "name": "yDist",
-                  "ioValue": 720
-                },
-                {
-                  "name": "zDist",
-                  "ioValue": 0
-                }
-              ]
-            },
-            {
-              "atomType": "Code",
-              "x": 0.5059523809523809,
-              "y": 0.18105849582172703,
-              "uniqueID": "id-2251",
-              "ioValues": [
-                {
-                  "name": "shape",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "selection",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "radius",
-                  "ioValue": 500
-                }
-              ],
-              "interpreterVersion": 1,
-              "code": "/**\n * Fillet Corners In Selection\n *\n * Fillets every corner of an input 2D shape that falls inside a second 2D\n * \"selection\" shape. Corners of the input outside the selection are left sharp.\n *\n * The selection may be any closed 2D shape (box, circle, polygon, …); a corner\n * is filleted when its point lies inside that region. The selection is inflated\n * by a small tolerance so corners sitting exactly on its edge still count.\n *\n * @param shape     The 2D shape whose corners should be filleted\n * @param selection A 2D shape defining which region of corners to fillet\n * @param radius    Fillet radius, in mm\n */\nfunction run(\n  shape: Assembly | undefined = undefined,\n  selection: Assembly | undefined = undefined,\n  radius: number = 5,\n): Assembly {\n  if (!shape) {\n    throw new Error(\"Connect a 2D shape to the 'shape' input.\");\n  }\n  if (!selection) {\n    throw new Error(\"Connect a 2D selection shape to the 'selection' input.\");\n  }\n\n  // Find the first 2D drawing inside an assembly (read-only, no mutation).\n  const firstDrawing = (asm: any): any => {\n    if (!asm) return null;\n    const g = asm.geometry;\n    if (Array.isArray(g)) {\n      for (const child of g) {\n        const d = firstDrawing(child);\n        if (d) return d;\n      }\n      return null;\n    }\n    return g && typeof g.sketchOnPlane === \"function\" ? g : null;\n  };\n\n  // The selection region, used to test whether each corner is \"inside\".\n  const selDrawing = firstDrawing(selection);\n  if (!selDrawing) {\n    throw new Error(\"The 'selection' input has no 2D geometry.\");\n  }\n\n  // Inflate the selection a touch so corners sitting exactly on its edge\n  // (a very common case) still count as inside. Tune TOL to your model scale.\n  const TOL = 1e-3;\n  let selBlueprint: any;\n  try {\n    selBlueprint = selDrawing.offset(TOL).blueprint;\n  } catch {\n    selBlueprint = selDrawing.blueprint; // fall back if offset fails\n  }\n\n  const filletLeaf = (drawing: any): any => {\n    let blueprint: any;\n    try {\n      blueprint = drawing.blueprint;\n    } catch {\n      // Disjoint / multi-region drawings don't expose a single blueprint.\n      return drawing;\n    }\n\n    // Corner points are the junctions between consecutive outline curves.\n    // Keep only those that fall inside the selection region.\n    const inside: [number, number][] = [];\n    for (const curve of blueprint.curves) {\n      const p = curve.lastPoint as [number, number];\n      if (selBlueprint.isInside(p)) {\n        inside.push(p);\n      }\n    }\n\n    if (inside.length === 0) {\n      return drawing; // no selected corners on this leaf\n    }\n\n    // Fillet only the corners whose point is in our inside-list. Smooth\n    // junctions (e.g. a circle's seam) aren't real corners, so they're ignored.\n    try {\n      return drawing.fillet(radius, (c: any) => c.inList(inside));\n    } catch (err) {\n      throw new Error(\n        `Failed to fillet ${inside.length} corner(s) with radius ${radius}mm ` +\n        `— the radius may be too large for a selected corner. (${err})`,\n      );\n    }\n  };\n\n  // Apply to every 2D leaf of the input shape, leaving non-2D leaves untouched.\n  const result = new Assembly(shape);\n  result.onLeafs((leaf) => {\n    const g = leaf.geometry;\n    if (g && typeof g.sketchOnPlane === \"function\") {\n      leaf.geometry = filletLeaf(g);\n    }\n    return leaf;\n  });\n\n  return result;\n}",
-              "compiledCode": "\"use strict\";\n/**\n * Fillet Corners In Selection\n *\n * Fillets every corner of an input 2D shape that falls inside a second 2D\n * \"selection\" shape. Corners of the input outside the selection are left sharp.\n *\n * The selection may be any closed 2D shape (box, circle, polygon, …); a corner\n * is filleted when its point lies inside that region. The selection is inflated\n * by a small tolerance so corners sitting exactly on its edge still count.\n *\n * @param shape     The 2D shape whose corners should be filleted\n * @param selection A 2D shape defining which region of corners to fillet\n * @param radius    Fillet radius, in mm\n */\nfunction run(shape = undefined, selection = undefined, radius = 5) {\n    if (!shape) {\n        throw new Error(\"Connect a 2D shape to the 'shape' input.\");\n    }\n    if (!selection) {\n        throw new Error(\"Connect a 2D selection shape to the 'selection' input.\");\n    }\n    // Find the first 2D drawing inside an assembly (read-only, no mutation).\n    const firstDrawing = (asm) => {\n        if (!asm)\n            return null;\n        const g = asm.geometry;\n        if (Array.isArray(g)) {\n            for (const child of g) {\n                const d = firstDrawing(child);\n                if (d)\n                    return d;\n            }\n            return null;\n        }\n        return g && typeof g.sketchOnPlane === \"function\" ? g : null;\n    };\n    // The selection region, used to test whether each corner is \"inside\".\n    const selDrawing = firstDrawing(selection);\n    if (!selDrawing) {\n        throw new Error(\"The 'selection' input has no 2D geometry.\");\n    }\n    // Inflate the selection a touch so corners sitting exactly on its edge\n    // (a very common case) still count as inside. Tune TOL to your model scale.\n    const TOL = 1e-3;\n    let selBlueprint;\n    try {\n        selBlueprint = selDrawing.offset(TOL).blueprint;\n    }\n    catch {\n        selBlueprint = selDrawing.blueprint; // fall back if offset fails\n    }\n    const filletLeaf = (drawing) => {\n        let blueprint;\n        try {\n            blueprint = drawing.blueprint;\n        }\n        catch {\n            // Disjoint / multi-region drawings don't expose a single blueprint.\n            return drawing;\n        }\n        // Corner points are the junctions between consecutive outline curves.\n        // Keep only those that fall inside the selection region.\n        const inside = [];\n        for (const curve of blueprint.curves) {\n            const p = curve.lastPoint;\n            if (selBlueprint.isInside(p)) {\n                inside.push(p);\n            }\n        }\n        if (inside.length === 0) {\n            return drawing; // no selected corners on this leaf\n        }\n        // Fillet only the corners whose point is in our inside-list. Smooth\n        // junctions (e.g. a circle's seam) aren't real corners, so they're ignored.\n        try {\n            return drawing.fillet(radius, (c) => c.inList(inside));\n        }\n        catch (err) {\n            throw new Error(`Failed to fillet ${inside.length} corner(s) with radius ${radius}mm ` +\n                `— the radius may be too large for a selected corner. (${err})`);\n        }\n    };\n    // Apply to every 2D leaf of the input shape, leaving non-2D leaves untouched.\n    const result = new Assembly(shape);\n    result.onLeafs((leaf) => {\n        const g = leaf.geometry;\n        if (g && typeof g.sketchOnPlane === \"function\") {\n            leaf.geometry = filletLeaf(g);\n        }\n        return leaf;\n    });\n    return result;\n}\n"
             },
             {
               "atomType": "GitHubMolecule",
@@ -2303,7 +2254,7 @@
             },
             {
               "atomType": "GitHubMolecule",
-              "x": 0.6858465608465608,
+              "x": 0.6884920634920635,
               "y": 0.5515320334261838,
               "uniqueID": "id-2304",
               "name": "Filet_Vertical_Edges",
@@ -4301,8 +4252,8 @@
             },
             {
               "atomType": "Move",
-              "x": 0.19907407407407407,
-              "y": 0.7047353760445683,
+              "x": 0.20701058201058203,
+              "y": 0.5348189415041783,
               "uniqueID": "id-3262",
               "ioValues": [
                 {
@@ -4382,6 +4333,178 @@
                   "ioValue": "__GEOMETRY_INPUT__"
                 }
               ]
+            },
+            {
+              "atomType": "Move",
+              "x": 0.33465608465608465,
+              "y": 0.1532033426183844,
+              "uniqueID": "id-3282",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "xDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 700,
+                  "currentEquation": "700"
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0,
+                  "currentEquation": "0"
+                }
+              ]
+            },
+            {
+              "atomType": "ShrinkWrap",
+              "x": 0.42526455026455023,
+              "y": 0.20891364902506962,
+              "uniqueID": "id-3288",
+              "name": "Shrink Wrap",
+              "ioValues": [
+                {
+                  "name": "Shape 1",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Shape 2",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Shape 3",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Shape 1",
+                  "ioValue": {
+                    "geometry": "move-move-circle-640-0-1000-0-0-700-0",
+                    "dimension": "2D",
+                    "tags": [],
+                    "plane": {
+                      "origin": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "xDir": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "normal": [
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "color": "#aad7f2",
+                    "bom": []
+                  }
+                },
+                {
+                  "name": "Shape 2",
+                  "ioValue": {
+                    "geometry": "circle-640",
+                    "dimension": "2D",
+                    "tags": [],
+                    "plane": {
+                      "origin": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "xDir": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "normal": [
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "color": "#aad7f2",
+                    "bom": []
+                  }
+                },
+                {
+                  "name": "Shape 3",
+                  "ioValue": null
+                }
+              ]
+            },
+            {
+              "atomType": "Fusion",
+              "x": 0.4292328042328042,
+              "y": 0.5515320334261838,
+              "uniqueID": "id-3293",
+              "ioValues": [
+                {
+                  "name": "Shape 1",
+                  "ioValue": {
+                    "geometry": "shrinkWrap-fuse-circle-640-move-move-circle-640-0-1000-0-0-700-0-50",
+                    "dimension": "2D",
+                    "tags": [],
+                    "color": "#aad7f2",
+                    "plane": {
+                      "origin": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "xDir": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "normal": [
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "bom": [
+                      []
+                    ]
+                  }
+                },
+                {
+                  "name": "Shape 2",
+                  "ioValue": {
+                    "geometry": "shrinkWrap-fuse-move-circle-640-0-1000-0-move-rectangle-2438.3999999999996-1524-0--100-0-50",
+                    "dimension": "2D",
+                    "tags": [],
+                    "color": "#aad7f2",
+                    "plane": {
+                      "origin": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "xDir": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "normal": [
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "bom": [
+                      []
+                    ]
+                  }
+                }
+              ],
+              "unionType": "Fusion"
             }
           ],
           "allConnectors": [
@@ -4396,19 +4519,24 @@
               "ap2ID": "id-495"
             },
             {
+              "ap2Name": "Shape 2",
+              "ap1ID": "id-494",
+              "ap2ID": "id-3288"
+            },
+            {
               "ap2Name": "Shape 1",
               "ap1ID": "id-495",
               "ap2ID": "id-496"
             },
             {
-              "ap2Name": "shape",
-              "ap1ID": "id-496",
-              "ap2ID": "id-2251"
+              "ap2Name": "geometry",
+              "ap1ID": "id-495",
+              "ap2ID": "id-3282"
             },
             {
-              "ap2Name": "geometry",
+              "ap2Name": "Shape 2",
               "ap1ID": "id-496",
-              "ap2ID": "id-497"
+              "ap2ID": "id-3293"
             },
             {
               "ap2Name": "Shape",
@@ -4419,11 +4547,6 @@
               "ap2Name": "geometry",
               "ap1ID": "id-510",
               "ap2ID": "id-511"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-510",
-              "ap2ID": "id-2245"
             },
             {
               "ap2Name": "geometry",
@@ -4439,11 +4562,6 @@
               "ap2Name": "number or geometry",
               "ap1ID": "id-1061",
               "ap2ID": "id-492"
-            },
-            {
-              "ap2Name": "selection",
-              "ap1ID": "id-2245",
-              "ap2ID": "id-2251"
             },
             {
               "ap2Name": "retain",
@@ -4484,6 +4602,21 @@
               "ap2Name": "geometry",
               "ap1ID": "id-3278",
               "ap2ID": "id-3258"
+            },
+            {
+              "ap2Name": "Shape 1",
+              "ap1ID": "id-3282",
+              "ap2ID": "id-3288"
+            },
+            {
+              "ap2Name": "Shape 1",
+              "ap1ID": "id-3288",
+              "ap2ID": "id-3293"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-3293",
+              "ap2ID": "id-497"
             }
           ],
           "fileTypeVersion": 1
@@ -4537,7 +4670,8 @@
                 },
                 {
                   "name": "yDist",
-                  "ioValue": 1000
+                  "ioValue": 1700,
+                  "currentEquation": "1700"
                 },
                 {
                   "name": "zDist",
@@ -5179,8 +5313,8 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.5753968253968255,
-          "y": 0.9247910863509751,
+          "x": 0.5628306878306878,
+          "y": 0.9164345403899721,
           "uniqueID": "id-1419",
           "name": "Reading Nook",
           "topLevel": false,
@@ -5651,8 +5785,8 @@
             },
             {
               "atomType": "GitHubMolecule",
-              "x": 0.24603174603174605,
-              "y": 0.5348189415041783,
+              "x": 0.2466931216931217,
+              "y": 0.5459610027855153,
               "uniqueID": "id-820",
               "name": "2D_Slice",
               "ioValues": [
@@ -7456,11 +7590,6 @@
           "ap2Name": "geometry",
           "ap1ID": "id-1045",
           "ap2ID": "id-1051"
-        },
-        {
-          "ap2Name": "Shape 3",
-          "ap1ID": "id-1051",
-          "ap2ID": "id-733"
         },
         {
           "ap2Name": "geometry",
