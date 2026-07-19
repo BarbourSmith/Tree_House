@@ -2045,8 +2045,8 @@
             },
             {
               "atomType": "Extrude",
-              "x": 0.6593915343915344,
-              "y": 0.3203342618384401,
+              "x": 0.6130952380952381,
+              "y": 0.3231197771587744,
               "uniqueID": "id-497",
               "ioValues": [
                 {
@@ -2118,8 +2118,8 @@
             },
             {
               "atomType": "Color",
-              "x": 0.8564814814814814,
-              "y": 0.6462395543175488,
+              "x": 0.8128306878306878,
+              "y": 0.40668523676880225,
               "uniqueID": "id-1061",
               "ioValues": [
                 {
@@ -2180,8 +2180,8 @@
             },
             {
               "atomType": "GitHubMolecule",
-              "x": 0.7003968253968255,
-              "y": 0.818941504178273,
+              "x": 0.8187830687830687,
+              "y": 0.8802228412256267,
               "uniqueID": "id-2273",
               "name": "Sinewave_Edges",
               "ioValues": [
@@ -2308,27 +2308,253 @@
             },
             {
               "atomType": "GitHubMolecule",
-              "x": 0.5191798941798942,
-              "y": 0.5069637883008357,
-              "uniqueID": "id-2288",
-              "name": "Github Molecule",
+              "x": 0.6858465608465608,
+              "y": 0.5515320334261838,
+              "uniqueID": "id-2304",
+              "name": "Filet_Vertical_Edges",
+              "ioValues": [
+                {
+                  "name": "Shape",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Radius",
+                  "ioValue": 10
+                },
+                {
+                  "name": "Bounding_Box",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ],
               "topLevel": false,
               "allAtoms": [
                 {
                   "atomType": "Output",
                   "x": 0.98,
                   "y": 0.5,
-                  "uniqueID": "id-2290",
+                  "uniqueID": "id-2293",
                   "ioValues": [
                     {
                       "name": "number or geometry",
                       "ioValue": "__GEOMETRY_INPUT__"
                     }
                   ]
+                },
+                {
+                  "atomType": "Code",
+                  "x": 0.5509259259259259,
+                  "y": 0.2590529247910863,
+                  "uniqueID": "id-2294",
+                  "ioValues": [
+                    {
+                      "name": "shape",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "radius",
+                      "ioValue": 2
+                    }
+                  ],
+                  "interpreterVersion": 0,
+                  "code": "const Inputs = [\n  { inputName: \"shape\", type: \"geometry\", defaultValue: null },\n  { inputName: \"radius\", type: \"number\", defaultValue: 2 },\n];\n\nlet assembly = library[shape];\n\nreturn await AssemblyMap(assembly, async (leaf) => {\n  let solid = leaf.geometry[0];\n  let filleted = solid.fillet(radius, (e) => e.inDirection(\"Z\"));\n  return { ...leaf, geometry: [filleted] };\n});\n"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.025384615384615384,
+                  "y": 0.15384615384615385,
+                  "uniqueID": "id-2295",
+                  "name": "Shape",
+                  "type": "geometry"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.025384615384615384,
+                  "y": 0.24615384615384617,
+                  "uniqueID": "id-2296",
+                  "name": "Radius"
+                },
+                {
+                  "atomType": "Rectangle",
+                  "x": 0.2976190476190476,
+                  "y": 0.3259052924791086,
+                  "uniqueID": "id-2297",
+                  "ioValues": [
+                    {
+                      "name": "x length",
+                      "ioValue": 100
+                    },
+                    {
+                      "name": "y length",
+                      "ioValue": 100
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Extrude",
+                  "x": 0.39761904761904765,
+                  "y": 0.3259052924791086,
+                  "uniqueID": "id-2298",
+                  "ioValues": [
+                    {
+                      "name": "geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "height",
+                      "ioValue": 100
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Code",
+                  "x": 0.6058201058201058,
+                  "y": 0.6350974930362118,
+                  "uniqueID": "id-2299",
+                  "ioValues": [
+                    {
+                      "name": "shape",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "radius",
+                      "ioValue": 10
+                    },
+                    {
+                      "name": "region",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    }
+                  ],
+                  "interpreterVersion": 0,
+                  "code": "const Inputs = [\n  { inputName: \"shape\", type: \"geometry\", defaultValue: null },\n  { inputName: \"radius\", type: \"number\", defaultValue: 2 },\n  { inputName: \"region\", type: \"geometry\", defaultValue: null },\n];\n\nlet assembly = library[shape];\n\nlet edgeFilter;\nif (region !== null) {\n  let bounds = await GetBounds(region);\n  edgeFilter = (e) => e.inDirection(\"Z\").inBox(bounds.min, bounds.max);\n} else {\n  edgeFilter = (e) => e.inDirection(\"Z\");\n}\n\nreturn await AssemblyMap(assembly, async (leaf) => {\n  let solid = leaf.geometry[0];\n  let filleted = solid.fillet(radius, edgeFilter);\n  return { ...leaf, geometry: [filleted] };\n});\n"
+                },
+                {
+                  "atomType": "Rectangle",
+                  "x": 0.27050264550264547,
+                  "y": 0.9526462395543175,
+                  "uniqueID": "id-2300",
+                  "ioValues": [
+                    {
+                      "name": "x length",
+                      "ioValue": 100
+                    },
+                    {
+                      "name": "y length",
+                      "ioValue": 100
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Extrude",
+                  "x": 0.37050264550264544,
+                  "y": 0.9526462395543175,
+                  "uniqueID": "id-2301",
+                  "ioValues": [
+                    {
+                      "name": "geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "height",
+                      "ioValue": 150
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Move",
+                  "x": 0.5,
+                  "y": 0.8969359331476323,
+                  "uniqueID": "id-2302",
+                  "ioValues": [
+                    {
+                      "name": "geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "xDist",
+                      "ioValue": 20
+                    },
+                    {
+                      "name": "yDist",
+                      "ioValue": 20
+                    },
+                    {
+                      "name": "zDist",
+                      "ioValue": 0
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.025384615384615384,
+                  "y": 0.3384615384615385,
+                  "uniqueID": "id-2303",
+                  "name": "Bounding_Box",
+                  "type": "geometry"
                 }
               ],
-              "allConnectors": [],
-              "fileTypeVersion": 1
+              "allConnectors": [
+                {
+                  "ap2Name": "shape",
+                  "ap1ID": "id-2295",
+                  "ap2ID": "id-2299"
+                },
+                {
+                  "ap2Name": "radius",
+                  "ap1ID": "id-2296",
+                  "ap2ID": "id-2299"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-2297",
+                  "ap2ID": "id-2298"
+                },
+                {
+                  "ap2Name": "number or geometry",
+                  "ap1ID": "id-2299",
+                  "ap2ID": "id-2293"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-2300",
+                  "ap2ID": "id-2301"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-2301",
+                  "ap2ID": "id-2302"
+                },
+                {
+                  "ap2Name": "region",
+                  "ap1ID": "id-2303",
+                  "ap2ID": "id-2299"
+                }
+              ],
+              "parentRepo": {
+                "lastFoundGit": "2026-07-19T02:23:39.092Z",
+                "privateRepo": false,
+                "repoName": "Filet_Vertical_Edges",
+                "dateCreated": "2026-03-25T23:26:25Z",
+                "likes": 0,
+                "readMe": "https://raw.githubusercontent.com/BarbourSmith/Filet_Vertical_Edges/master/README.md?sanitize=true",
+                "yyyy": 2026,
+                "topMoleculeID": "id-448",
+                "githubMoleculesUsed": [],
+                "html_url": "https://github.com/BarbourSmith/Filet_Vertical_Edges",
+                "topics": [],
+                "parentRepo": null,
+                "forks": 1,
+                "dateModified": "739700",
+                "ranking": 4.4,
+                "searchField": "filet_vertical_edges barboursmith fillets only the vertical edges of the input shape ",
+                "owner": "BarbourSmith",
+                "description": "Fillets only the vertical edges of the input shape",
+                "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Filet_Vertical_Edges/master/project.abundance?sanitize=true",
+                "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Filet_Vertical_Edges/master/project.svg?sanitize=true",
+                "isLocal": false
+              },
+              "unitsKey": "MM",
+              "fileTypeVersion": 1,
+              "lastReloadedFromGithubAt": 1784436850833
             }
           ],
           "allConnectors": [
@@ -2354,8 +2580,18 @@
             },
             {
               "ap2Name": "geometry",
+              "ap1ID": "id-496",
+              "ap2ID": "id-497"
+            },
+            {
+              "ap2Name": "geometry",
               "ap1ID": "id-497",
               "ap2ID": "id-1061"
+            },
+            {
+              "ap2Name": "Shape",
+              "ap1ID": "id-497",
+              "ap2ID": "id-2304"
             },
             {
               "ap2Name": "geometry",
@@ -2373,6 +2609,11 @@
               "ap2ID": "id-512"
             },
             {
+              "ap2Name": "Bounding_Box",
+              "ap1ID": "id-512",
+              "ap2ID": "id-2304"
+            },
+            {
               "ap2Name": "number or geometry",
               "ap1ID": "id-1061",
               "ap2ID": "id-492"
@@ -2381,16 +2622,6 @@
               "ap2Name": "selection",
               "ap1ID": "id-2245",
               "ap2ID": "id-2251"
-            },
-            {
-              "ap2Name": "2D_Shape",
-              "ap1ID": "id-2251",
-              "ap2ID": "id-2273"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-2251",
-              "ap2ID": "id-497"
             }
           ],
           "fileTypeVersion": 1
