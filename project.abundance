@@ -1950,8 +1950,7 @@
               "ioValues": [
                 {
                   "name": "x length",
-                  "ioValue": 1500,
-                  "currentEquation": "1500"
+                  "ioValue": 1500
                 },
                 {
                   "name": "y length",
@@ -2903,8 +2902,7 @@
               "ioValues": [
                 {
                   "name": "diameter",
-                  "ioValue": 1300,
-                  "currentEquation": "1300"
+                  "ioValue": 1300
                 }
               ]
             },
@@ -7543,45 +7541,6 @@
             }
           ],
           "fileTypeVersion": 1
-        },
-        {
-          "atomType": "Circle",
-          "x": 0.7797619047619048,
-          "y": 0.7827298050139275,
-          "uniqueID": "id-4194",
-          "ioValues": [
-            {
-              "name": "diameter",
-              "ioValue": 1219.1999999999998,
-              "currentEquation": "48*25.4"
-            }
-          ]
-        },
-        {
-          "atomType": "Rotate",
-          "x": 0.8386243386243387,
-          "y": 0.8384401114206128,
-          "uniqueID": "id-4197",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "x-axis degrees",
-              "ioValue": 90,
-              "currentEquation": "90"
-            },
-            {
-              "name": "y-axis degrees",
-              "ioValue": 0,
-              "currentEquation": "0"
-            },
-            {
-              "name": "z-axis degrees",
-              "ioValue": 0
-            }
-          ]
         }
       ],
       "allConnectors": [
@@ -7659,11 +7618,6 @@
           "ap2Name": "geometry",
           "ap1ID": "id-739",
           "ap2ID": "id-1045"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-4194",
-          "ap2ID": "id-4197"
         }
       ],
       "fileTypeVersion": 1
