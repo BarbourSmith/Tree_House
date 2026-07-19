@@ -1929,13 +1929,14 @@
             },
             {
               "atomType": "Circle",
-              "x": 0.07936507936507936,
-              "y": 0.24512534818941506,
+              "x": 0.08002645502645503,
+              "y": 0.22841225626740946,
               "uniqueID": "id-494",
               "ioValues": [
                 {
                   "name": "diameter",
-                  "ioValue": 1270
+                  "ioValue": 1280,
+                  "currentEquation": "1280"
                 }
               ]
             },
@@ -1985,7 +1986,7 @@
                 {
                   "name": "Shape 1",
                   "ioValue": {
-                    "geometry": "move-circle-635-0-1000-0",
+                    "geometry": "move-circle-640-0-1000-0",
                     "dimension": "2D",
                     "tags": [],
                     "plane": {
@@ -2044,8 +2045,8 @@
             },
             {
               "atomType": "Extrude",
-              "x": 0.5958994708994709,
-              "y": 0.27019498607242337,
+              "x": 0.6726190476190476,
+              "y": 0.6462395543175488,
               "uniqueID": "id-497",
               "ioValues": [
                 {
@@ -2060,8 +2061,8 @@
             },
             {
               "atomType": "Rectangle",
-              "x": 0.2962962962962963,
-              "y": 0.8245125348189415,
+              "x": 0.29828042328042326,
+              "y": 0.8217270194986073,
               "uniqueID": "id-510",
               "ioValues": [
                 {
@@ -2070,7 +2071,8 @@
                 },
                 {
                   "name": "y length",
-                  "ioValue": 200
+                  "ioValue": 400,
+                  "currentEquation": "400"
                 }
               ]
             },
@@ -2092,8 +2094,8 @@
             },
             {
               "atomType": "Move",
-              "x": 0.6097883597883598,
-              "y": 0.8022284122562675,
+              "x": 0.5833333333333334,
+              "y": 0.9108635097493036,
               "uniqueID": "id-512",
               "ioValues": [
                 {
@@ -2116,8 +2118,8 @@
             },
             {
               "atomType": "Color",
-              "x": 0.8472222222222222,
-              "y": 0.6908077994428969,
+              "x": 0.8564814814814814,
+              "y": 0.6462395543175488,
               "uniqueID": "id-1061",
               "ioValues": [
                 {
@@ -2126,669 +2128,6 @@
                 }
               ],
               "selectedColor": "Purple"
-            },
-            {
-              "atomType": "GitHubMolecule",
-              "x": 0.7301587301587301,
-              "y": 0.38440111420612816,
-              "uniqueID": "id-498",
-              "name": "Filet_Vertical_Edges",
-              "ioValues": [
-                {
-                  "name": "Shape",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Radius",
-                  "ioValue": 700
-                },
-                {
-                  "name": "Bounding_Box",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                }
-              ],
-              "topLevel": false,
-              "allAtoms": [
-                {
-                  "atomType": "Output",
-                  "x": 0.98,
-                  "y": 0.5,
-                  "uniqueID": "id-499",
-                  "ioValues": [
-                    {
-                      "name": "number or geometry",
-                      "ioValue": "__GEOMETRY_INPUT__"
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Code",
-                  "x": 0.5509259259259259,
-                  "y": 0.2590529247910863,
-                  "uniqueID": "id-500",
-                  "ioValues": [
-                    {
-                      "name": "shape",
-                      "ioValue": "__GEOMETRY_INPUT__"
-                    },
-                    {
-                      "name": "radius",
-                      "ioValue": 2
-                    }
-                  ],
-                  "interpreterVersion": 0,
-                  "code": "const Inputs = [\n  { inputName: \"shape\", type: \"geometry\", defaultValue: null },\n  { inputName: \"radius\", type: \"number\", defaultValue: 2 },\n];\n\nlet assembly = library[shape];\n\nreturn await AssemblyMap(assembly, async (leaf) => {\n  let solid = leaf.geometry[0];\n  let filleted = solid.fillet(radius, (e) => e.inDirection(\"Z\"));\n  return { ...leaf, geometry: [filleted] };\n});\n"
-                },
-                {
-                  "atomType": "Input",
-                  "x": 0.025384615384615384,
-                  "y": 0.15384615384615385,
-                  "uniqueID": "id-501",
-                  "name": "Shape",
-                  "type": "geometry"
-                },
-                {
-                  "atomType": "Input",
-                  "x": 0.025384615384615384,
-                  "y": 0.24615384615384617,
-                  "uniqueID": "id-502",
-                  "name": "Radius"
-                },
-                {
-                  "atomType": "Rectangle",
-                  "x": 0.2976190476190476,
-                  "y": 0.3259052924791086,
-                  "uniqueID": "id-503",
-                  "ioValues": [
-                    {
-                      "name": "x length",
-                      "ioValue": 100
-                    },
-                    {
-                      "name": "y length",
-                      "ioValue": 100
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Extrude",
-                  "x": 0.39761904761904765,
-                  "y": 0.3259052924791086,
-                  "uniqueID": "id-504",
-                  "ioValues": [
-                    {
-                      "name": "geometry",
-                      "ioValue": "__GEOMETRY_INPUT__"
-                    },
-                    {
-                      "name": "height",
-                      "ioValue": 100
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Code",
-                  "x": 0.6058201058201058,
-                  "y": 0.6350974930362118,
-                  "uniqueID": "id-505",
-                  "ioValues": [
-                    {
-                      "name": "shape",
-                      "ioValue": "__GEOMETRY_INPUT__"
-                    },
-                    {
-                      "name": "radius",
-                      "ioValue": 700
-                    },
-                    {
-                      "name": "region",
-                      "ioValue": "__GEOMETRY_INPUT__"
-                    }
-                  ],
-                  "interpreterVersion": 0,
-                  "code": "const Inputs = [\n  { inputName: \"shape\", type: \"geometry\", defaultValue: null },\n  { inputName: \"radius\", type: \"number\", defaultValue: 2 },\n  { inputName: \"region\", type: \"geometry\", defaultValue: null },\n];\n\nlet assembly = library[shape];\n\nlet edgeFilter;\nif (region !== null) {\n  let bounds = await GetBounds(region);\n  edgeFilter = (e) => e.inDirection(\"Z\").inBox(bounds.min, bounds.max);\n} else {\n  edgeFilter = (e) => e.inDirection(\"Z\");\n}\n\nreturn await AssemblyMap(assembly, async (leaf) => {\n  let solid = leaf.geometry[0];\n  let filleted = solid.fillet(radius, edgeFilter);\n  return { ...leaf, geometry: [filleted] };\n});\n"
-                },
-                {
-                  "atomType": "Rectangle",
-                  "x": 0.27050264550264547,
-                  "y": 0.9526462395543175,
-                  "uniqueID": "id-506",
-                  "ioValues": [
-                    {
-                      "name": "x length",
-                      "ioValue": 100
-                    },
-                    {
-                      "name": "y length",
-                      "ioValue": 100
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Extrude",
-                  "x": 0.37050264550264544,
-                  "y": 0.9526462395543175,
-                  "uniqueID": "id-507",
-                  "ioValues": [
-                    {
-                      "name": "geometry",
-                      "ioValue": "__GEOMETRY_INPUT__"
-                    },
-                    {
-                      "name": "height",
-                      "ioValue": 150
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Move",
-                  "x": 0.5,
-                  "y": 0.8969359331476323,
-                  "uniqueID": "id-508",
-                  "ioValues": [
-                    {
-                      "name": "geometry",
-                      "ioValue": "__GEOMETRY_INPUT__"
-                    },
-                    {
-                      "name": "xDist",
-                      "ioValue": 20
-                    },
-                    {
-                      "name": "yDist",
-                      "ioValue": 20
-                    },
-                    {
-                      "name": "zDist",
-                      "ioValue": 0
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Input",
-                  "x": 0.025384615384615384,
-                  "y": 0.3384615384615385,
-                  "uniqueID": "id-509",
-                  "name": "Bounding_Box",
-                  "type": "geometry"
-                }
-              ],
-              "allConnectors": [
-                {
-                  "ap2Name": "shape",
-                  "ap1ID": "id-501",
-                  "ap2ID": "id-505"
-                },
-                {
-                  "ap2Name": "radius",
-                  "ap1ID": "id-502",
-                  "ap2ID": "id-505"
-                },
-                {
-                  "ap2Name": "geometry",
-                  "ap1ID": "id-503",
-                  "ap2ID": "id-504"
-                },
-                {
-                  "ap2Name": "number or geometry",
-                  "ap1ID": "id-505",
-                  "ap2ID": "id-499"
-                },
-                {
-                  "ap2Name": "geometry",
-                  "ap1ID": "id-506",
-                  "ap2ID": "id-507"
-                },
-                {
-                  "ap2Name": "geometry",
-                  "ap1ID": "id-507",
-                  "ap2ID": "id-508"
-                },
-                {
-                  "ap2Name": "region",
-                  "ap1ID": "id-509",
-                  "ap2ID": "id-505"
-                }
-              ],
-              "parentRepo": {
-                "lastFoundGit": "2026-07-19T02:23:39.092Z",
-                "privateRepo": false,
-                "repoName": "Filet_Vertical_Edges",
-                "dateCreated": "2026-03-25T23:26:25Z",
-                "likes": 0,
-                "readMe": "https://raw.githubusercontent.com/BarbourSmith/Filet_Vertical_Edges/master/README.md?sanitize=true",
-                "yyyy": 2026,
-                "topMoleculeID": "id-448",
-                "githubMoleculesUsed": [],
-                "html_url": "https://github.com/BarbourSmith/Filet_Vertical_Edges",
-                "topics": [],
-                "parentRepo": null,
-                "forks": 1,
-                "dateModified": "739700",
-                "ranking": 4.4,
-                "searchField": "filet_vertical_edges barboursmith fillets only the vertical edges of the input shape ",
-                "owner": "BarbourSmith",
-                "description": "Fillets only the vertical edges of the input shape",
-                "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Filet_Vertical_Edges/master/project.abundance?sanitize=true",
-                "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Filet_Vertical_Edges/master/project.svg?sanitize=true",
-                "isLocal": false
-              },
-              "unitsKey": "MM",
-              "fileTypeVersion": 1,
-              "lastReloadedFromGithubAt": 1784430517118
-            },
-            {
-              "atomType": "GitHubMolecule",
-              "x": 0.5132275132275133,
-              "y": 0.5376044568245125,
-              "uniqueID": "id-2193",
-              "name": "Fillet_in_Bounds",
-              "ioValues": [
-                {
-                  "name": "Shape",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Radius",
-                  "ioValue": 700,
-                  "currentEquation": "700"
-                },
-                {
-                  "name": "Selection",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                }
-              ],
-              "topLevel": false,
-              "allAtoms": [
-                {
-                  "atomType": "Output",
-                  "x": 0.98,
-                  "y": 0.5,
-                  "uniqueID": "id-2174",
-                  "ioValues": [
-                    {
-                      "name": "number or geometry",
-                      "ioValue": "__GEOMETRY_INPUT__"
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Rectangle",
-                  "x": 0.19246031746031744,
-                  "y": 0.14763231197771587,
-                  "uniqueID": "id-2175",
-                  "ioValues": [
-                    {
-                      "name": "x length",
-                      "ioValue": 100
-                    },
-                    {
-                      "name": "y length",
-                      "ioValue": 100
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Extrude",
-                  "x": 0.37037037037037035,
-                  "y": 0.2841225626740947,
-                  "uniqueID": "id-2176",
-                  "ioValues": [
-                    {
-                      "name": "geometry",
-                      "ioValue": "__GEOMETRY_INPUT__"
-                    },
-                    {
-                      "name": "height",
-                      "ioValue": 100
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Rectangle",
-                  "x": 0.26785714285714285,
-                  "y": 0.818941504178273,
-                  "uniqueID": "id-2177",
-                  "ioValues": [
-                    {
-                      "name": "x length",
-                      "ioValue": 120
-                    },
-                    {
-                      "name": "y length",
-                      "ioValue": 120
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Extrude",
-                  "x": 0.37050264550264544,
-                  "y": 0.8022284122562675,
-                  "uniqueID": "id-2178",
-                  "ioValues": [
-                    {
-                      "name": "geometry",
-                      "ioValue": "__GEOMETRY_INPUT__"
-                    },
-                    {
-                      "name": "height",
-                      "ioValue": 10
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Move",
-                  "x": 0.45833333333333337,
-                  "y": 0.8272980501392758,
-                  "uniqueID": "id-2179",
-                  "ioValues": [
-                    {
-                      "name": "geometry",
-                      "ioValue": "__GEOMETRY_INPUT__"
-                    },
-                    {
-                      "name": "xDist",
-                      "ioValue": 50
-                    },
-                    {
-                      "name": "yDist",
-                      "ioValue": 0
-                    },
-                    {
-                      "name": "zDist",
-                      "ioValue": -2
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Circle",
-                  "x": 0.15674603174603174,
-                  "y": 0.43732590529247906,
-                  "uniqueID": "id-2180",
-                  "ioValues": [
-                    {
-                      "name": "diameter",
-                      "ioValue": 100
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Extrude",
-                  "x": 0.49074074074074076,
-                  "y": 0.3147632311977716,
-                  "uniqueID": "id-2181",
-                  "ioValues": [
-                    {
-                      "name": "geometry",
-                      "ioValue": "__GEOMETRY_INPUT__"
-                    },
-                    {
-                      "name": "height",
-                      "ioValue": 100
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Input",
-                  "x": 0.025384615384615384,
-                  "y": 0.15384615384615385,
-                  "uniqueID": "id-2182",
-                  "name": "Shape",
-                  "type": "geometry"
-                },
-                {
-                  "atomType": "Input",
-                  "x": 0.025384615384615384,
-                  "y": 0.24615384615384617,
-                  "uniqueID": "id-2183",
-                  "name": "Radius"
-                },
-                {
-                  "atomType": "Input",
-                  "x": 0.025384615384615384,
-                  "y": 0.3384615384615385,
-                  "uniqueID": "id-2184",
-                  "name": "Selection",
-                  "type": "geometry"
-                },
-                {
-                  "atomType": "Code",
-                  "x": 0.5198412698412698,
-                  "y": 0.5348189415041783,
-                  "uniqueID": "id-2192",
-                  "ioValues": [
-                    {
-                      "name": "shape",
-                      "ioValue": "__GEOMETRY_INPUT__"
-                    },
-                    {
-                      "name": "radius",
-                      "ioValue": 700
-                    },
-                    {
-                      "name": "region",
-                      "ioValue": "__GEOMETRY_INPUT__"
-                    }
-                  ],
-                  "interpreterVersion": 1,
-                  "code": "function run(\n  shape: Assembly,\n  radius: number = 2,\n  region: Assembly | undefined = undefined,\n): Assembly {\n  let edgeFilter: ((e: any) => any) | null = null;\n\n  if (region) {\n    // Compute the combined bounding box of the region assembly by walking\n    // its leaves (replaces the old GetBounds helper).\n    const min = [Infinity, Infinity, Infinity];\n    const max = [-Infinity, -Infinity, -Infinity];\n    function collectBounds(node: Assembly) {\n      if (Array.isArray(node.geometry)) {\n        node.geometry.forEach(collectBounds);\n      } else {\n        const bb = node.geometry.boundingBox.bounds;\n        for (let i = 0; i < 3; i++) {\n          min[i] = Math.min(min[i], bb[0][i]);\n          max[i] = Math.max(max[i], bb[1][i]);\n        }\n      }\n    }\n    collectBounds(region);\n\n    const tol = 1e-6;\n    edgeFilter = (e) =>\n      e.when(({ element }) => {\n        const bb = element.boundingBox.bounds;\n        return (\n          bb[0][0] >= min[0] - tol &&\n          bb[0][1] >= min[1] - tol &&\n          bb[0][2] >= min[2] - tol &&\n          bb[1][0] <= max[0] + tol &&\n          bb[1][1] <= max[1] + tol &&\n          bb[1][2] <= max[2] + tol\n        );\n      });\n  }\n\n  return shape.onLeafs((leaf) => {\n    const solid = leaf.geometry;\n    leaf.geometry = edgeFilter\n      ? solid.fillet(radius, edgeFilter)\n      : solid.fillet(radius);\n    return leaf;\n  }) as Assembly;\n}",
-                  "compiledCode": "\"use strict\";\nfunction run(shape, radius = 2, region = undefined) {\n    let edgeFilter = null;\n    if (region) {\n        // Compute the combined bounding box of the region assembly by walking\n        // its leaves (replaces the old GetBounds helper).\n        const min = [Infinity, Infinity, Infinity];\n        const max = [-Infinity, -Infinity, -Infinity];\n        function collectBounds(node) {\n            if (Array.isArray(node.geometry)) {\n                node.geometry.forEach(collectBounds);\n            }\n            else {\n                const bb = node.geometry.boundingBox.bounds;\n                for (let i = 0; i < 3; i++) {\n                    min[i] = Math.min(min[i], bb[0][i]);\n                    max[i] = Math.max(max[i], bb[1][i]);\n                }\n            }\n        }\n        collectBounds(region);\n        const tol = 1e-6;\n        edgeFilter = (e) => e.when(({ element }) => {\n            const bb = element.boundingBox.bounds;\n            return (bb[0][0] >= min[0] - tol &&\n                bb[0][1] >= min[1] - tol &&\n                bb[0][2] >= min[2] - tol &&\n                bb[1][0] <= max[0] + tol &&\n                bb[1][1] <= max[1] + tol &&\n                bb[1][2] <= max[2] + tol);\n        });\n    }\n    return shape.onLeafs((leaf) => {\n        const solid = leaf.geometry;\n        leaf.geometry = edgeFilter\n            ? solid.fillet(radius, edgeFilter)\n            : solid.fillet(radius);\n        return leaf;\n    });\n}\n"
-                },
-                {
-                  "atomType": "GitHubMolecule",
-                  "x": 0.42857142857142855,
-                  "y": 0.22284122562674097,
-                  "uniqueID": "id-2185",
-                  "name": "Concentric_Circles",
-                  "ioValues": [
-                    {
-                      "name": "OD",
-                      "ioValue": 100
-                    },
-                    {
-                      "name": "ID",
-                      "ioValue": 50
-                    }
-                  ],
-                  "topLevel": false,
-                  "allAtoms": [
-                    {
-                      "atomType": "Output",
-                      "x": 0.98,
-                      "y": 0.5,
-                      "uniqueID": "id-2186",
-                      "ioValues": [
-                        {
-                          "name": "number or geometry",
-                          "ioValue": "__GEOMETRY_INPUT__"
-                        }
-                      ]
-                    },
-                    {
-                      "atomType": "Input",
-                      "x": 0.025384615384615384,
-                      "y": 0.15384615384615385,
-                      "uniqueID": "id-2187",
-                      "name": "OD",
-                      "type": "number"
-                    },
-                    {
-                      "atomType": "Input",
-                      "x": 0.025384615384615384,
-                      "y": 0.24615384615384617,
-                      "uniqueID": "id-2188",
-                      "name": "ID",
-                      "type": "number"
-                    },
-                    {
-                      "atomType": "Circle",
-                      "x": 0.460559796437659,
-                      "y": 0.42567567567567566,
-                      "uniqueID": "id-2189",
-                      "ioValues": [
-                        {
-                          "name": "diameter",
-                          "ioValue": 100
-                        }
-                      ]
-                    },
-                    {
-                      "atomType": "Circle",
-                      "x": 0.44529262086514,
-                      "y": 0.7263513513513513,
-                      "uniqueID": "id-2190",
-                      "ioValues": [
-                        {
-                          "name": "diameter",
-                          "ioValue": 50
-                        }
-                      ]
-                    },
-                    {
-                      "atomType": "Difference",
-                      "x": 0.6615776081424937,
-                      "y": 0.5506756756756757,
-                      "uniqueID": "id-2191",
-                      "ioValues": [
-                        {
-                          "name": "retain",
-                          "ioValue": "__GEOMETRY_INPUT__"
-                        },
-                        {
-                          "name": "remove",
-                          "ioValue": "__GEOMETRY_INPUT__"
-                        }
-                      ]
-                    }
-                  ],
-                  "allConnectors": [
-                    {
-                      "ap2Name": "diameter",
-                      "ap1ID": "id-2187",
-                      "ap2ID": "id-2189"
-                    },
-                    {
-                      "ap2Name": "diameter",
-                      "ap1ID": "id-2188",
-                      "ap2ID": "id-2190"
-                    },
-                    {
-                      "ap2Name": "retain",
-                      "ap1ID": "id-2189",
-                      "ap2ID": "id-2191"
-                    },
-                    {
-                      "ap2Name": "remove",
-                      "ap1ID": "id-2190",
-                      "ap2ID": "id-2191"
-                    },
-                    {
-                      "ap2Name": "number or geometry",
-                      "ap1ID": "id-2191",
-                      "ap2ID": "id-2186"
-                    }
-                  ],
-                  "parentRepo": {
-                    "lastFoundGit": "2026-04-28T18:23:39.166Z",
-                    "privateRepo": false,
-                    "repoName": "Concentric_Circles",
-                    "dateCreated": "2025-11-08T04:08:14Z",
-                    "likes": 0,
-                    "readMe": "https://raw.githubusercontent.com/BarbourSmith/Concentric_Circles/master/README.md?sanitize=true",
-                    "yyyy": 2025,
-                    "topMoleculeID": "id-1170",
-                    "githubMoleculesUsed": [],
-                    "html_url": "https://github.com/BarbourSmith/Concentric_Circles",
-                    "topics": [],
-                    "parentRepo": null,
-                    "forks": 0,
-                    "dateModified": "739563",
-                    "ranking": 18.9,
-                    "searchField": "concentric_circles barboursmith creates two concentric circles. the result is 2d ",
-                    "owner": "BarbourSmith",
-                    "description": "Creates two concentric circles. The result is 2D",
-                    "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Concentric_Circles/master/project.abundance?sanitize=true",
-                    "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Concentric_Circles/master/project.svg?sanitize=true",
-                    "isLocal": false
-                  },
-                  "unitsKey": "Unitless",
-                  "fileTypeVersion": 1,
-                  "lastReloadedFromGithubAt": 1777409097289
-                }
-              ],
-              "allConnectors": [
-                {
-                  "ap2Name": "geometry",
-                  "ap1ID": "id-2175",
-                  "ap2ID": "id-2176"
-                },
-                {
-                  "ap2Name": "geometry",
-                  "ap1ID": "id-2177",
-                  "ap2ID": "id-2178"
-                },
-                {
-                  "ap2Name": "geometry",
-                  "ap1ID": "id-2178",
-                  "ap2ID": "id-2179"
-                },
-                {
-                  "ap2Name": "shape",
-                  "ap1ID": "id-2182",
-                  "ap2ID": "id-2192"
-                },
-                {
-                  "ap2Name": "radius",
-                  "ap1ID": "id-2183",
-                  "ap2ID": "id-2192"
-                },
-                {
-                  "ap2Name": "region",
-                  "ap1ID": "id-2184",
-                  "ap2ID": "id-2192"
-                },
-                {
-                  "ap2Name": "number or geometry",
-                  "ap1ID": "id-2192",
-                  "ap2ID": "id-2174"
-                },
-                {
-                  "ap2Name": "geometry",
-                  "ap1ID": "id-2185",
-                  "ap2ID": "id-2181"
-                }
-              ],
-              "parentRepo": {
-                "lastFoundGit": "2026-07-19T02:23:39.092Z",
-                "privateRepo": false,
-                "repoName": "Fillet_in_Bounds",
-                "dateCreated": "2026-04-28T20:40:52Z",
-                "likes": 0,
-                "readMe": "https://raw.githubusercontent.com/BarbourSmith/Fillet_in_Bounds/master/README.md?sanitize=true",
-                "yyyy": 2026,
-                "topMoleculeID": "id-524",
-                "githubMoleculesUsed": [
-                  {
-                    "owner": "BarbourSmith",
-                    "repoName": "Concentric_Circles"
-                  }
-                ],
-                "html_url": "https://github.com/BarbourSmith/Fillet_in_Bounds",
-                "topics": [],
-                "parentRepo": null,
-                "forks": 0,
-                "dateModified": "739796",
-                "ranking": 4.8,
-                "searchField": "fillet_in_bounds barboursmith takes an input shape and a selection box and fillets all of the edges that fall within the bounding box ",
-                "owner": "BarbourSmith",
-                "description": "Takes an input shape and a selection box and fillets all of the edges that fall within the bounding box",
-                "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Fillet_in_Bounds/master/project.abundance?sanitize=true",
-                "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Fillet_in_Bounds/master/project.svg?sanitize=true",
-                "isLocal": false
-              },
-              "unitsKey": "Unitless",
-              "fileTypeVersion": 1,
-              "lastReloadedFromGithubAt": 1784436030691
             },
             {
               "atomType": "Move",
@@ -2814,6 +2153,158 @@
                   "ioValue": 0
                 }
               ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.5059523809523809,
+              "y": 0.18105849582172703,
+              "uniqueID": "id-2251",
+              "ioValues": [
+                {
+                  "name": "shape",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "selection",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "radius",
+                  "ioValue": 500,
+                  "currentEquation": "500"
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/**\n * Fillet Corners In Selection\n *\n * Fillets every corner of an input 2D shape that falls inside a second 2D\n * \"selection\" shape. Corners of the input outside the selection are left sharp.\n *\n * The selection may be any closed 2D shape (box, circle, polygon, …); a corner\n * is filleted when its point lies strictly inside that region.\n *\n * @param shape     The 2D shape whose corners should be filleted\n * @param selection A 2D shape defining which region of corners to fillet\n * @param radius    Fillet radius, in mm\n */\nfunction run(\n  shape: Assembly | undefined = undefined,\n  selection: Assembly | undefined = undefined,\n  radius: number = 5,\n): Assembly {\n  if (!shape) {\n    throw new Error(\"Connect a 2D shape to the 'shape' input.\");\n  }\n  if (!selection) {\n    throw new Error(\"Connect a 2D selection shape to the 'selection' input.\");\n  }\n\n  // Find the first 2D drawing inside an assembly (read-only, no mutation).\n  const firstDrawing = (asm: any): any => {\n    if (!asm) return null;\n    const g = asm.geometry;\n    if (Array.isArray(g)) {\n      for (const child of g) {\n        const d = firstDrawing(child);\n        if (d) return d;\n      }\n      return null;\n    }\n    return g && typeof g.sketchOnPlane === \"function\" ? g : null;\n  };\n\n  // The selection region, used to test whether each corner is \"inside\".\n  const selDrawing = firstDrawing(selection);\n  if (!selDrawing) {\n    throw new Error(\"The 'selection' input has no 2D geometry.\");\n  }\n  const selBlueprint = selDrawing.blueprint;\n\n  const filletLeaf = (drawing: any): any => {\n    let blueprint: any;\n    try {\n      blueprint = drawing.blueprint;\n    } catch {\n      // Disjoint / multi-region drawings don't expose a single blueprint.\n      return drawing;\n    }\n\n    // Corner points are the junctions between consecutive outline curves.\n    // Keep only those that fall inside the selection region.\n    const inside: [number, number][] = [];\n    for (const curve of blueprint.curves) {\n      const p = curve.lastPoint as [number, number];\n      if (selBlueprint.isInside(p)) {\n        inside.push(p);\n      }\n    }\n\n    if (inside.length === 0) {\n      return drawing; // no selected corners on this leaf\n    }\n\n    // Fillet only the corners whose point is in our inside-list. Smooth\n    // junctions (e.g. a circle's seam) aren't real corners, so they're ignored.\n    try {\n      return drawing.fillet(radius, (c: any) => c.inList(inside));\n    } catch (err) {\n      throw new Error(\n        `Failed to fillet ${inside.length} corner(s) with radius ${radius}mm ` +\n        `— the radius may be too large for a selected corner. (${err})`,\n      );\n    }\n  };\n\n  // Apply to every 2D leaf of the input shape, leaving non-2D leaves untouched.\n  const result = new Assembly(shape);\n  result.onLeafs((leaf) => {\n    const g = leaf.geometry;\n    if (g && typeof g.sketchOnPlane === \"function\") {\n      leaf.geometry = filletLeaf(g);\n    }\n    return leaf;\n  });\n\n  return result;\n}",
+              "compiledCode": "\"use strict\";\n/**\n * Fillet Corners In Selection\n *\n * Fillets every corner of an input 2D shape that falls inside a second 2D\n * \"selection\" shape. Corners of the input outside the selection are left sharp.\n *\n * The selection may be any closed 2D shape (box, circle, polygon, …); a corner\n * is filleted when its point lies strictly inside that region.\n *\n * @param shape     The 2D shape whose corners should be filleted\n * @param selection A 2D shape defining which region of corners to fillet\n * @param radius    Fillet radius, in mm\n */\nfunction run(shape = undefined, selection = undefined, radius = 5) {\n    if (!shape) {\n        throw new Error(\"Connect a 2D shape to the 'shape' input.\");\n    }\n    if (!selection) {\n        throw new Error(\"Connect a 2D selection shape to the 'selection' input.\");\n    }\n    // Find the first 2D drawing inside an assembly (read-only, no mutation).\n    const firstDrawing = (asm) => {\n        if (!asm)\n            return null;\n        const g = asm.geometry;\n        if (Array.isArray(g)) {\n            for (const child of g) {\n                const d = firstDrawing(child);\n                if (d)\n                    return d;\n            }\n            return null;\n        }\n        return g && typeof g.sketchOnPlane === \"function\" ? g : null;\n    };\n    // The selection region, used to test whether each corner is \"inside\".\n    const selDrawing = firstDrawing(selection);\n    if (!selDrawing) {\n        throw new Error(\"The 'selection' input has no 2D geometry.\");\n    }\n    const selBlueprint = selDrawing.blueprint;\n    const filletLeaf = (drawing) => {\n        let blueprint;\n        try {\n            blueprint = drawing.blueprint;\n        }\n        catch {\n            // Disjoint / multi-region drawings don't expose a single blueprint.\n            return drawing;\n        }\n        // Corner points are the junctions between consecutive outline curves.\n        // Keep only those that fall inside the selection region.\n        const inside = [];\n        for (const curve of blueprint.curves) {\n            const p = curve.lastPoint;\n            if (selBlueprint.isInside(p)) {\n                inside.push(p);\n            }\n        }\n        if (inside.length === 0) {\n            return drawing; // no selected corners on this leaf\n        }\n        // Fillet only the corners whose point is in our inside-list. Smooth\n        // junctions (e.g. a circle's seam) aren't real corners, so they're ignored.\n        try {\n            return drawing.fillet(radius, (c) => c.inList(inside));\n        }\n        catch (err) {\n            throw new Error(`Failed to fillet ${inside.length} corner(s) with radius ${radius}mm ` +\n                `— the radius may be too large for a selected corner. (${err})`);\n        }\n    };\n    // Apply to every 2D leaf of the input shape, leaving non-2D leaves untouched.\n    const result = new Assembly(shape);\n    result.onLeafs((leaf) => {\n        const g = leaf.geometry;\n        if (g && typeof g.sketchOnPlane === \"function\") {\n            leaf.geometry = filletLeaf(g);\n        }\n        return leaf;\n    });\n    return result;\n}\n"
+            },
+            {
+              "atomType": "GitHubMolecule",
+              "x": 0.6527777777777778,
+              "y": 0.36211699164345407,
+              "uniqueID": "id-2273",
+              "name": "Sinewave_Edges",
+              "ioValues": [
+                {
+                  "name": "Period",
+                  "ioValue": 160
+                },
+                {
+                  "name": "Amplitude",
+                  "ioValue": 18,
+                  "currentEquation": "18"
+                },
+                {
+                  "name": "2D_Shape",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ],
+              "topLevel": false,
+              "allAtoms": [
+                {
+                  "atomType": "Output",
+                  "x": 0.98,
+                  "y": 0.5,
+                  "uniqueID": "id-2268",
+                  "ioValues": [
+                    {
+                      "name": "number or geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Code",
+                  "x": 0.5046296296296297,
+                  "y": 0.5069637883008357,
+                  "uniqueID": "id-2269",
+                  "ioValues": [
+                    {
+                      "name": "shape",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "period",
+                      "ioValue": 160
+                    },
+                    {
+                      "name": "amplitude",
+                      "ioValue": 18
+                    }
+                  ],
+                  "interpreterVersion": 1,
+                  "code": "/**\n * Sine-Wave Edge\n *\n * Takes a 2D shape (e.g. a circle) and displaces its outline in and out along\n * the local outward normal following a sine wave. The result is the same shape\n * with a wavy, scalloped edge.\n *\n * The wave is parametrised by true arc length around the perimeter, so the\n * period and amplitude are constant in millimetres regardless of the shape.\n * Because the perimeter is generally not an exact multiple of the period, the\n * wave cannot meet itself smoothly — that single discontinuity (the \"seam\") is\n * forced to the bottom of the shape, i.e. the -y direction.\n *\n * @param shape     A 2D geometry to add the wavy edge to (wire from another atom)\n * @param period    Wavelength of the sine wave along the edge, in mm\n * @param amplitude Peak in/out displacement of the edge, in mm\n */\nfunction run(\n  shape: Assembly | undefined = undefined,\n  period: number = 10,\n  amplitude: number = 2,\n): Assembly {\n  if (!shape) {\n    throw new Error(\"Connect a 2D shape to the 'shape' input.\");\n  }\n\n  const per = Math.max(period, 1e-6); // guard against divide-by-zero\n\n  // Turn one flat replicad Drawing into a wavy-edged Drawing.\n  const makeWavy = (drawing: any): any => {\n    // Get the outline of the shape as a single closed wire.\n    const sketch = drawing.sketchOnPlane();\n    const wire = sketch.face().outerWire();\n    const perimeter = wire.length;\n\n    // Sample the outline densely enough to resolve every wave crest.\n    const pointsPerPeriod = 32;\n    let n = Math.ceil((perimeter / per) * pointsPerPeriod);\n    n = Math.max(120, Math.min(n, 6000));\n\n    // pointAt() takes a normalised parameter 0..1 around the closed wire.\n    // We stop before 1.0 so we don't duplicate the start point.\n    const raw: { x: number; y: number }[] = [];\n    for (let i = 0; i < n; i++) {\n      const v = wire.pointAt(i / n);\n      raw.push({ x: v.x, y: v.y });\n    }\n\n    // Rotate the sample list so it starts at the bottom-most point. This puts\n    // the wave's seam (where it wraps and must jump) in the -y direction.\n    let startIdx = 0;\n    let minY = Infinity;\n    for (let i = 0; i < n; i++) {\n      if (raw[i].y < minY) {\n        minY = raw[i].y;\n        startIdx = i;\n      }\n    }\n    const pts = raw.slice(startIdx).concat(raw.slice(0, startIdx));\n\n    // Winding order (signed area) tells us which normal direction is \"outward\".\n    let area2 = 0;\n    for (let i = 0; i < n; i++) {\n      const a = pts[i];\n      const b = pts[(i + 1) % n];\n      area2 += a.x * b.y - b.x * a.y;\n    }\n    const ccw = area2 > 0;\n\n    // Cumulative arc length from the seam, used to drive the sine phase.\n    const s = new Array<number>(n);\n    s[0] = 0;\n    for (let i = 1; i < n; i++) {\n      s[i] = s[i - 1] + Math.hypot(pts[i].x - pts[i - 1].x, pts[i].y - pts[i - 1].y);\n    }\n\n    // Displace each point along its outward normal by amplitude * sin(2π·s/λ).\n    const out: [number, number][] = [];\n    for (let i = 0; i < n; i++) {\n      const prev = pts[(i - 1 + n) % n];\n      const next = pts[(i + 1) % n];\n      let tx = next.x - prev.x;\n      let ty = next.y - prev.y;\n      const tl = Math.hypot(tx, ty) || 1;\n      tx /= tl;\n      ty /= tl;\n\n      // Rotate the tangent 90° to the exterior side of the curve.\n      const nx = ccw ? ty : -ty;\n      const ny = ccw ? -tx : tx;\n\n      const disp = amplitude * Math.sin((2 * Math.PI * s[i]) / per);\n      out.push([pts[i].x + nx * disp, pts[i].y + ny * disp]);\n    }\n\n    // Rebuild the closed 2D outline. The seam is out[n-1] -> out[0] at the\n    // bottom, where the displacement returns to 0 so the jump is clean.\n    let pen = replicad.draw(out[0]);\n    for (let i = 1; i < out.length; i++) {\n      pen = pen.lineTo(out[i]);\n    }\n    return pen.close();\n  };\n\n  // Apply to every 2D leaf in the input, leaving anything non-2D untouched.\n  const result = new Assembly(shape);\n  result.onLeafs((leaf) => {\n    const g = leaf.geometry;\n    if (g && typeof g.sketchOnPlane === \"function\") {\n      leaf.geometry = makeWavy(g);\n      leaf.tags = [...(leaf.tags ?? []), \"sine-wave-edge\"];\n    }\n    return leaf;\n  });\n\n  return result;\n}",
+                  "compiledCode": "\"use strict\";\n/**\n * Sine-Wave Edge\n *\n * Takes a 2D shape (e.g. a circle) and displaces its outline in and out along\n * the local outward normal following a sine wave. The result is the same shape\n * with a wavy, scalloped edge.\n *\n * The wave is parametrised by true arc length around the perimeter, so the\n * period and amplitude are constant in millimetres regardless of the shape.\n * Because the perimeter is generally not an exact multiple of the period, the\n * wave cannot meet itself smoothly — that single discontinuity (the \"seam\") is\n * forced to the bottom of the shape, i.e. the -y direction.\n *\n * @param shape     A 2D geometry to add the wavy edge to (wire from another atom)\n * @param period    Wavelength of the sine wave along the edge, in mm\n * @param amplitude Peak in/out displacement of the edge, in mm\n */\nfunction run(shape = undefined, period = 10, amplitude = 2) {\n    if (!shape) {\n        throw new Error(\"Connect a 2D shape to the 'shape' input.\");\n    }\n    const per = Math.max(period, 1e-6); // guard against divide-by-zero\n    // Turn one flat replicad Drawing into a wavy-edged Drawing.\n    const makeWavy = (drawing) => {\n        // Get the outline of the shape as a single closed wire.\n        const sketch = drawing.sketchOnPlane();\n        const wire = sketch.face().outerWire();\n        const perimeter = wire.length;\n        // Sample the outline densely enough to resolve every wave crest.\n        const pointsPerPeriod = 32;\n        let n = Math.ceil((perimeter / per) * pointsPerPeriod);\n        n = Math.max(120, Math.min(n, 6000));\n        // pointAt() takes a normalised parameter 0..1 around the closed wire.\n        // We stop before 1.0 so we don't duplicate the start point.\n        const raw = [];\n        for (let i = 0; i < n; i++) {\n            const v = wire.pointAt(i / n);\n            raw.push({ x: v.x, y: v.y });\n        }\n        // Rotate the sample list so it starts at the bottom-most point. This puts\n        // the wave's seam (where it wraps and must jump) in the -y direction.\n        let startIdx = 0;\n        let minY = Infinity;\n        for (let i = 0; i < n; i++) {\n            if (raw[i].y < minY) {\n                minY = raw[i].y;\n                startIdx = i;\n            }\n        }\n        const pts = raw.slice(startIdx).concat(raw.slice(0, startIdx));\n        // Winding order (signed area) tells us which normal direction is \"outward\".\n        let area2 = 0;\n        for (let i = 0; i < n; i++) {\n            const a = pts[i];\n            const b = pts[(i + 1) % n];\n            area2 += a.x * b.y - b.x * a.y;\n        }\n        const ccw = area2 > 0;\n        // Cumulative arc length from the seam, used to drive the sine phase.\n        const s = new Array(n);\n        s[0] = 0;\n        for (let i = 1; i < n; i++) {\n            s[i] = s[i - 1] + Math.hypot(pts[i].x - pts[i - 1].x, pts[i].y - pts[i - 1].y);\n        }\n        // Displace each point along its outward normal by amplitude * sin(2π·s/λ).\n        const out = [];\n        for (let i = 0; i < n; i++) {\n            const prev = pts[(i - 1 + n) % n];\n            const next = pts[(i + 1) % n];\n            let tx = next.x - prev.x;\n            let ty = next.y - prev.y;\n            const tl = Math.hypot(tx, ty) || 1;\n            tx /= tl;\n            ty /= tl;\n            // Rotate the tangent 90° to the exterior side of the curve.\n            const nx = ccw ? ty : -ty;\n            const ny = ccw ? -tx : tx;\n            const disp = amplitude * Math.sin((2 * Math.PI * s[i]) / per);\n            out.push([pts[i].x + nx * disp, pts[i].y + ny * disp]);\n        }\n        // Rebuild the closed 2D outline. The seam is out[n-1] -> out[0] at the\n        // bottom, where the displacement returns to 0 so the jump is clean.\n        let pen = replicad.draw(out[0]);\n        for (let i = 1; i < out.length; i++) {\n            pen = pen.lineTo(out[i]);\n        }\n        return pen.close();\n    };\n    // Apply to every 2D leaf in the input, leaving anything non-2D untouched.\n    const result = new Assembly(shape);\n    result.onLeafs((leaf) => {\n        const g = leaf.geometry;\n        if (g && typeof g.sketchOnPlane === \"function\") {\n            leaf.geometry = makeWavy(g);\n            leaf.tags = [...(leaf.tags ?? []), \"sine-wave-edge\"];\n        }\n        return leaf;\n    });\n    return result;\n}\n"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.025384615384615384,
+                  "y": 0.15384615384615385,
+                  "uniqueID": "id-2270",
+                  "name": "Period"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.025384615384615384,
+                  "y": 0.24615384615384617,
+                  "uniqueID": "id-2271",
+                  "name": "Amplitude"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.025384615384615384,
+                  "y": 0.3384615384615385,
+                  "uniqueID": "id-2272",
+                  "name": "2D_Shape",
+                  "type": "geometry"
+                }
+              ],
+              "allConnectors": [
+                {
+                  "ap2Name": "number or geometry",
+                  "ap1ID": "id-2269",
+                  "ap2ID": "id-2268"
+                },
+                {
+                  "ap2Name": "period",
+                  "ap1ID": "id-2270",
+                  "ap2ID": "id-2269"
+                },
+                {
+                  "ap2Name": "amplitude",
+                  "ap1ID": "id-2271",
+                  "ap2ID": "id-2269"
+                },
+                {
+                  "ap2Name": "shape",
+                  "ap1ID": "id-2272",
+                  "ap2ID": "id-2269"
+                }
+              ],
+              "parentRepo": {
+                "privateRepo": false,
+                "repoName": "Sinewave_Edges",
+                "dateCreated": "2026-07-19T04:35:11Z",
+                "readMe": "https://raw.githubusercontent.com/BarbourSmith/Sinewave_Edges/master/README.md?sanitize=true",
+                "yyyy": 2026,
+                "topMoleculeID": "id-584",
+                "githubMoleculesUsed": [],
+                "html_url": "https://github.com/BarbourSmith/Sinewave_Edges",
+                "topics": [],
+                "parentRepo": null,
+                "forks": 0,
+                "dateModified": "739816",
+                "ranking": 0,
+                "searchField": "sinewave_edges barboursmith apply a sine wave to the edges of the input 2d shape ",
+                "owner": "BarbourSmith",
+                "description": "Apply a sine wave to the edges of the input 2D shape",
+                "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Sinewave_Edges/master/project.abundance?sanitize=true",
+                "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Sinewave_Edges/master/project.svg?sanitize=true",
+                "isLocal": false
+              },
+              "unitsKey": "Unitless",
+              "fileTypeVersion": 1,
+              "lastReloadedFromGithubAt": 1784436439141
             }
           ],
           "allConnectors": [
@@ -2833,24 +2324,14 @@
               "ap2ID": "id-496"
             },
             {
+              "ap2Name": "shape",
+              "ap1ID": "id-496",
+              "ap2ID": "id-2251"
+            },
+            {
               "ap2Name": "geometry",
-              "ap1ID": "id-496",
-              "ap2ID": "id-497"
-            },
-            {
-              "ap2Name": "Shape",
-              "ap1ID": "id-496",
-              "ap2ID": "id-2193"
-            },
-            {
-              "ap2Name": "number or geometry",
-              "ap1ID": "id-496",
-              "ap2ID": "id-492"
-            },
-            {
-              "ap2Name": "Shape",
               "ap1ID": "id-497",
-              "ap2ID": "id-498"
+              "ap2ID": "id-1061"
             },
             {
               "ap2Name": "geometry",
@@ -2868,19 +2349,24 @@
               "ap2ID": "id-512"
             },
             {
-              "ap2Name": "Bounding_Box",
-              "ap1ID": "id-512",
-              "ap2ID": "id-498"
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-1061",
+              "ap2ID": "id-492"
+            },
+            {
+              "ap2Name": "selection",
+              "ap1ID": "id-2245",
+              "ap2ID": "id-2251"
+            },
+            {
+              "ap2Name": "2D_Shape",
+              "ap1ID": "id-2251",
+              "ap2ID": "id-2273"
             },
             {
               "ap2Name": "geometry",
-              "ap1ID": "id-498",
-              "ap2ID": "id-1061"
-            },
-            {
-              "ap2Name": "Selection",
-              "ap1ID": "id-2245",
-              "ap2ID": "id-2193"
+              "ap1ID": "id-2273",
+              "ap2ID": "id-497"
             }
           ],
           "fileTypeVersion": 1
