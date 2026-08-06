@@ -5902,6 +5902,18 @@
         }
       ],
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Circle",
+      "x": 0.3974867724867725,
+      "y": 0.8245125348189415,
+      "uniqueID": "id-6726",
+      "ioValues": [
+        {
+          "name": "diameter",
+          "ioValue": 10
+        }
+      ]
     }
   ],
   "allConnectors": [
