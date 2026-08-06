@@ -2613,8 +2613,7 @@
                 },
                 {
                   "name": "height",
-                  "ioValue": 1828.8,
-                  "currentEquation": "1828.8"
+                  "ioValue": 1828.8
                 }
               ]
             },
@@ -2700,6 +2699,99 @@
                   "name": "diameter",
                   "ioValue": 1143,
                   "currentEquation": "45*25.4"
+                }
+              ]
+            },
+            {
+              "atomType": "Rectangle",
+              "x": 0.1541005291005291,
+              "y": 0.649025069637883,
+              "uniqueID": "id-5974",
+              "ioValues": [
+                {
+                  "name": "x length",
+                  "ioValue": 25
+                },
+                {
+                  "name": "y length",
+                  "ioValue": 63.5,
+                  "currentEquation": "2.5*25.4"
+                }
+              ]
+            },
+            {
+              "atomType": "Extrude",
+              "x": 0.22883597883597884,
+              "y": 0.6211699164345404,
+              "uniqueID": "id-5975",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "height",
+                  "ioValue": 1828.8
+                }
+              ]
+            },
+            {
+              "atomType": "Add-BOM-Tag",
+              "x": 0.3492063492063492,
+              "y": 0.4902506963788301,
+              "uniqueID": "id-5976",
+              "name": "Add BOM Tag",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Item Name",
+                  "ioValue": "1x3x6' Plank",
+                  "currentEquation": "1x3x6' Plank"
+                },
+                {
+                  "name": "Number Needed",
+                  "ioValue": 1
+                },
+                {
+                  "name": "Cost (USD)",
+                  "ioValue": 0
+                },
+                {
+                  "name": "Source Link",
+                  "ioValue": ""
+                }
+              ],
+              "BOMitem": {
+                "BOMitemName": "1x3x6' Plank",
+                "numberNeeded": 1,
+                "costUSD": 0,
+                "source": ""
+              }
+            },
+            {
+              "atomType": "Move",
+              "x": 0.46230158730158727,
+              "y": 0.6239554317548747,
+              "uniqueID": "id-5989",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "xDist",
+                  "ioValue": 581
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
                 }
               ]
             },
@@ -2845,100 +2937,6 @@
               "lastReloadedFromGithubAt": 1784432436200
             },
             {
-              "atomType": "Rectangle",
-              "x": 0.1541005291005291,
-              "y": 0.649025069637883,
-              "uniqueID": "id-5974",
-              "ioValues": [
-                {
-                  "name": "x length",
-                  "ioValue": 25
-                },
-                {
-                  "name": "y length",
-                  "ioValue": 63.5,
-                  "currentEquation": "2.5*25.4"
-                }
-              ]
-            },
-            {
-              "atomType": "Extrude",
-              "x": 0.22883597883597884,
-              "y": 0.6211699164345404,
-              "uniqueID": "id-5975",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "height",
-                  "ioValue": 1828.8,
-                  "currentEquation": "1828.8"
-                }
-              ]
-            },
-            {
-              "atomType": "Add-BOM-Tag",
-              "x": 0.3492063492063492,
-              "y": 0.4902506963788301,
-              "uniqueID": "id-5976",
-              "name": "Add BOM Tag",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Item Name",
-                  "ioValue": "1x3x6' Plank",
-                  "currentEquation": "1x3x6' Plank"
-                },
-                {
-                  "name": "Number Needed",
-                  "ioValue": 1
-                },
-                {
-                  "name": "Cost (USD)",
-                  "ioValue": 0
-                },
-                {
-                  "name": "Source Link",
-                  "ioValue": ""
-                }
-              ],
-              "BOMitem": {
-                "BOMitemName": "1x3x6' Plank",
-                "numberNeeded": 1,
-                "costUSD": 0,
-                "source": ""
-              }
-            },
-            {
-              "atomType": "Move",
-              "x": 0.46230158730158727,
-              "y": 0.6239554317548747,
-              "uniqueID": "id-5989",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "xDist",
-                  "ioValue": 581
-                },
-                {
-                  "name": "yDist",
-                  "ioValue": 0
-                },
-                {
-                  "name": "zDist",
-                  "ioValue": 0
-                }
-              ]
-            },
-            {
               "atomType": "GitHubMolecule",
               "x": 0.5621693121693122,
               "y": 0.5654596100278552,
@@ -2955,8 +2953,7 @@
                 },
                 {
                   "name": "Angle",
-                  "ioValue": 6.92,
-                  "currentEquation": "6.92"
+                  "ioValue": 6.92
                 }
               ],
               "topLevel": false,
@@ -3092,11 +3089,6 @@
             },
             {
               "ap2Name": "geometry",
-              "ap1ID": "id-1434",
-              "ap2ID": "id-1450"
-            },
-            {
-              "ap2Name": "geometry",
               "ap1ID": "id-5974",
               "ap2ID": "id-5975"
             },
@@ -3114,6 +3106,11 @@
               "ap2Name": "Shape",
               "ap1ID": "id-5989",
               "ap2ID": "id-6005"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-1434",
+              "ap2ID": "id-1450"
             },
             {
               "ap2Name": "retain",
